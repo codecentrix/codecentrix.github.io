@@ -1,0 +1,82 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Web Automation Library for MSHTML programming in C++, C#, VB.Net">
+<meta name="Keywords" content="BHO, IE9 automation, browser addon, extension, library, web automation">
+<title>
+		IE6/IE7/IE8/IE9 add-ons/extensions development with Twebst Web Automation Library
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;AttachToWnd - web automation method</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Creates a web automation library <a href="Browser.htm
+			">Browser</a> object from a <i>'Internet Explorer_Server'</i>, <i>'IEFrame'</i> or <i>'TabWindowClass'</i> window handle.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		var b = coreObj.AttachToWnd(hWnd);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>hWnd</code> is a Win32 API window handle.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Returns a <a href="Browser.htm
+			">Browser</a> web automation library object.
+		The <i>hWnd</i> parameter is the handle of a <i>Internet Explorer_Server</i>, <i>IEFrame</i> or <i>TabWindowClass</i> window of <i>Internet Explorer</i> browser.
+		It could be obtained using other ways than <i>Twebst</i> web automation library features. It could be also obtained by using <a href="ieWindow.htm
+			">ieWindow</a>, <a href="tabWindow.htm
+			">tabWindow</a> or <a href="topWindow.htm
+			">topWindow</a> properties.
+		This method is useful when you need to automate an existing IE browser instance for which you have a Win32 API window handle.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// hwnd is a valid handle of a 'Internet Explorer_Server', 'IEFrame' or 'TabWindowClass' window inside IE.
+</span><span STYLE="color: blue">var</span> hwnd    = 0x1C05B8;
+<span STYLE="color: blue">var</span> core    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = core.<a href="AttachToWnd.htm
+			">AttachToWnd</a>(hwnd);
+
+browser.<a href="Navigate.htm
+			">Navigate</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+    </code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="AttachToNativeBrowser.htm
+			">AttachToNativeBrowser</a> | <a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a> | <a href="AttachToNativeFrame.htm
+			">AttachToNativeFrame</a> | <a href="ieWindow.htm
+			">ieWindow</a> | <a href="tabWindow.htm
+			">tabWindow</a> | <a href="topWindow.htm
+			">topWindow</a> | <a href="WndToNativeDocument.htm
+			">WndToNativeDocument</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

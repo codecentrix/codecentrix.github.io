@@ -1,0 +1,69 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate IEFrame window - maximize, minimize, restore and set in foreground">
+<meta name="Keywords" content="Internet Explorer Automation, IEFrame, SetForegroundWindow">
+<title>
+		Internet Explorer Automation - show, hide, maximize, minimize, restore and put in foreground IEFrame top window
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;ShowBrowserWindow - web automation method</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Shows, hides, maximizes, minimizes, restores or puts in foreground the browser window.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		browserObj.ShowBrowserWindow(show_window_constant);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>show_window_constant</code> is one of the following browser constants: <a href="Browser.htm#constants">SHOW_IN_FOREGROUND</a>, <a href="Browser.htm#constants">SHOW_HIDE</a>, <a href="Browser.htm#constants">SHOW_MAXIMIZE</a>, <a href="Browser.htm#constants">SHOW_MINIMIZE</a>, <a href="Browser.htm#constants">SHOW_RESTORE</a>, <a href="Browser.htm#constants">SHOW_VISIBLE</a>.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		In case of failure this method throws a script exception and the <a href="lastError.htm
+			">lastError</a> property of the <a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">FAIL_ERROR</a> or <a href="Core.htm#constants">BROWSER_CONNECTION_LOST_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+newBrowser.<a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a>(newBrowser.<a href="Browser.htm#constants">SHOW_IN_FOREGROUND</a>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Close.htm
+			">Close</a> | <a href="foregroundBrowser.htm
+			">foregroundBrowser</a> | <a href="StartBrowser.htm
+			">StartBrowser</a> | <a href="StartHiddenBrowser.htm
+			">StartHiddenBrowser</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

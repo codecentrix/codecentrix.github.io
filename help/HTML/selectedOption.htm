@@ -1,0 +1,83 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="IE automation - get programmatic control over drop-down / list-box web controls">
+<meta name="Keywords" content="IE automation, web control, drop-down, list-box, HTML option, select">
+<title>
+		IE automation - automate selecting options in HTML drop-down and list-box web controls
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;selectedOption - web automation propety</h2>
+</div>
+<h1>
+		IE automation property that retrieves the selected option in a HTML drop-down / list-box web control.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		var option = elementObj.selectedOption;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		If no option is selected then <i>null</i> is returned after <a href="searchTimeout.htm
+			">searchTimeout</a> has expired. It can be applied only to &lt;select&gt; objects, otherwise
+		a web automation exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+		In case of an error the method throws a script exception and the <a href="lastError.htm
+			">lastError</a> property of the core object is set accordingly.
+		<br><br>
+		The time allocated for searching the selected option is specified by the <a href="searchTimeout.htm
+			">searchTimeout</a> property. If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser objects to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true, then a web automation exception is thrown.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Displays the selected option in a combo-box HTML control.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/tests/qt3.htm"</span>);
+<span STYLE="color: blue">var</span> select  = browser.<a href="FindElement.htm
+			">FindElement</a>(<span STYLE="color: red">"select"</span>);
+
+WScript.Echo(select.<a href="selectedOption.htm
+			">selectedOption</a>.text);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AddSelection.htm
+			">AddSelection</a> | <a href="AddSelectionRange.htm
+			">AddSelectionRange</a> | <a href="ClearSelection.htm
+			">ClearSelection</a> | <a href="Element.htm
+			">Element</a> | <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a> | <a href="Select.htm
+			">Select</a> | <a href="SelectRange.htm
+			">SelectRange</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

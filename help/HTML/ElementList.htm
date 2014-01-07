@@ -1,0 +1,85 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate Internet Explorer with VBA/C# web macros">
+<meta name="Keywords" content="Internet Explorer macro, IE9 macro, C# MSHTML, VBA, IHTMLElementCollection, web control, web automation">
+<title>
+		Internet Explorer 10 macro - automate IHTMLElementCollection with VBA and C#
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;ElementList - IE macro object</h2>
+</div>
+<dl>
+<dd>
+<p>
+		This IE macro object represents a collection of <a href="Element.htm
+			">Element</a> web automation objects. Each web macro object in
+		the collection represents a native <i>Internet Explorer</i> web control ( <a href="http://msdn.microsoft.com/en-us/library/aa752279(VS.85).aspx" target="_blank">IHTMLElement</a> ).
+		It provides properties to access IE macro objects in the collection.
+	</p>
+</dd>
+<dd><code>&nbsp;
+			var elementListObj = browserObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = frameObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = frameObj.FindChildrenElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = elementObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = elementObj.FindChildrenElements(Search conditions);
+		</code></dd>
+</dl>
+<div class="section">Properties</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="coreProp.htm">core</a></td>
+<td width="80%">Returns a reference to the parent <a href="Core.htm
+			">Core</a> IE macro object of the element list.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="item.htm
+			">item</a></td>
+<td width="80%">Retrieves an <a href="Element.htm
+			">Element</a> IE macro object from the collection based on a given index.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="length.htm
+			">length</a></td>
+<td width="80%">Retrieves the number of <a href="Element.htm
+			">Element</a> web macro objects in the collection.</td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="BrowserList.htm
+			">BrowserList</a> | <a href="Element.htm
+			">Element</a> | <a href="Frame.htm
+			">Frame</a> | <a href="FrameList.htm
+			">FrameList</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+							2013 CodeCentrix Software. All rights reserved.
+						</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

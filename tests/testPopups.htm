@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Test popups for Twebst</title>
+		
+		<script>
+			// Make error window to appear.
+			function GenError()
+			{
+				asdf;
+			}
+
+			function OnPrompt()
+			{
+				var val = window.prompt('Prompt text', 'initial text');
+				if (val != null)
+				{
+					document.getElementById("divres").innerText = val;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<hr />
+		Button below generates a script error<br/><br/>
+		<input id="err" type="button" value="Error" onclick="GenError();" /><br/><br/><br/>
+
+		<hr />
+		Buttons below opens <i>window.alert</i> and <i>window.prompt</i> dialog boxes<br/><br/>
+		<input id="alert"  type="button" value="Alert"   onclick="window.alert('Alert text');" /> 
+		<input id="conf"   type="button" value="Confirm" onclick="window.confirm('Confirm text');" /> 
+		<input id="prompt" type="button" value="Prompt"  onclick="OnPrompt();" />
+		<div id="divres">
+			text
+		</div>
+		<br/><br/><br/>
+		
+		<hr />
+		The form below makes <i>auto complete password</i> dialog box to appear
+		<form>
+			<input id="usr" type="text"/> <br/>
+			<input id="pwd" type="password"/><br/>
+			<input type="submit" value="Submit"/>
+		</form><br/>
+		
+		<hr />
+		Button below generates <i>security alert</i> dialog box<br/>
+		<input id="sec" type="button" value="Security" onclick="window.location='https://google.com/'" />
+	</body>
+</html>

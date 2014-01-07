@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Codecentrix - Twebst HTML Dialogs Automation</title>
+		<META content="Twebst is a COM library that automates Internet Explorer browser. With its help one can write scripts or programs that automate: regressin tests of web application, web actions, data entry and form filling, login on web sites, web data extraction, navigation on complex sites." name="description">
+		<META content="Twebst, web script, record script, web spy, web macro, macro, account login, fill login forms, fill web forms, regression test, automate browser, macro recorder, data entry, data extraction, record action" name="keywords">
+		<link href="./css/tests.css" rel="stylesheet" type="text/css">
+		
+		<script>
+			function OpenModal()
+			{
+				setTimeout("window.showModalDialog('./modal.htm');", 100);
+			}
+
+			function OpenModeless()
+			{
+				window.showModelessDialog("./modeless.htm");
+			}
+
+			function DoTest()
+			{
+				window.alert(window.frames.length);
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<h1 class="topicHighlight">&nbsp;<i>Twebst</i> HTML Dialogs Automation</h1>
+		<h3><font color="green"><b>Automate HTML dialog boxes create by <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ms536759.aspx">showModalDialog</a>
+		and <a target="_blank" href="http://msdn.microsoft.com/en-us/library/aa741355(VS.85).aspx">showModelessDialog</a> methods.</b></font></h3>
+
+		<br/>
+		<input type="button" value="Open Modal Box" onclick="OpenModal();" />
+		<input type="button" value="Open Modeless Box" onclick="OpenModeless();" />
+		<br/>
+		<br/>
+
+		<hr>
+		<center>
+			<font face="Arial, Helvetica, sans-serif"><b>© 2009 CodeCentrix Software. All rights reserved.</b></font>
+		</center>
+	</body>
+</html>

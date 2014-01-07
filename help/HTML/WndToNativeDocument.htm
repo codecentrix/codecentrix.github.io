@@ -1,0 +1,77 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="C# IE6 - IE9 automation - get IHTMLDocument2 out of Internet Explorer_Server Win32 window handle">
+<meta name="Keywords" content="web automation, IHTMLDocument2, Internet Explorer_Server, TabWindowClass, C# MSHTML, VB.Net, C++, Win32, handle, HWND">
+<title>
+		C#/C++ MSHTML programming - automate IHTMLDocument2 and Internet Explorer_Server window in C#, VB.Net and C++
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;WndToNativeDocument - web automation method</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Retrieves a native HTML <i>document</i> object ( <a href="http://msdn.microsoft.com/en-us/library/aa752574.aspx" target="_blank">IHTMLDocument2</a> ) from a <i>Internet Explorer_Server</i> Win32 window handle.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		var nativeDoc = core.WndToNativeDocument(ieWndHandle);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>ieWndHandle</code> is a Win32 API window handle.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><i>ieWndHandle</i> parameter is the handle of a <i>Internet Explorer_Server</i> window hosted by any application.
+    This IE automation method can be useful if you already have a handle of a browser control hosted inside a .Net WinForms application and you need to access the HTML document.
+    In case of an error the method throws a web automation exception and the <a href="lastError.htm
+			">lastError</a> property of the core object is set as follows:
+    <ul>
+<li><a href="Core.htm#constants">INVALID_ARG_ERROR</a>: if ieWndHandle parameter is not a valid <i>Internet Explorer_Server</i> window handle.</li>
+<li><a href="Core.htm#constants">FAIL_ERROR</a>: in case of anohter error.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Assume ieWnd it is a valid handle to a 'Internet Explorer_Server' window.
+</span><span STYLE="color: blue">var</span> ieWnd     = 0xA10AF0;
+<span STYLE="color: blue">var</span> coreObj   = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> nativeDoc = coreObj.<a href="WndToNativeDocument.htm
+			">WndToNativeDocument</a>(ieWnd);
+
+WScrip.Echo(<span STYLE="color: red">"The document size is: "</span> + nativeDoc.fileSize);
+    </code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AttachToWnd.htm
+			">AttachToWnd</a> | <a href="Core.htm
+			">Core</a> | <a href="document.htm
+			">document</a> | <a href="ieWindow.htm
+			">ieWindow</a> | <a href="nativeBrowser.htm
+			">nativeBrowser</a> | <a href="tabWindow.htm
+			">tabWindow</a> | <a href="topWindow.htm
+			">topWindow</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

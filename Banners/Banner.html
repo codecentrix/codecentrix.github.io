@@ -1,0 +1,140 @@
+<html>
+	<head>
+		<title>Codecentrix</title>
+		<link href="./Banner.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript">
+		<!--
+		function CompareBannersPriority(bannerLeft, bannerRight)
+		{
+			return bannerLeft.priority - bannerRight.priority;
+		}
+
+		function CreateBanner(title, text, link, url, priority)
+		{
+			var banner = new Object();
+			banner.title    = title;
+			banner.text     = text;
+			banner.link     = link;
+			banner.url      = url;
+			banner.priority = priority;
+			
+			return banner;
+		}
+
+		function GetRandomBanner(banners)
+		{
+			// Sort banners on priority.
+			banners.sort(CompareBannersPriority);
+
+			// Get a random priority.
+			var randomPriority = 0;
+			randomPriority = Math.floor(Math.random() * 100) + 1; // 1% .. 100%
+			
+			var totalPriority = 0;
+			for (var i = 0; i < banners.length; ++i)
+			{
+				totalPriority += banners[i].priority;
+			}
+
+			var crntSumPrio = 0;
+			for (var i = 0; i < banners.length; ++i)
+			{
+				crntSumPrio += ((banners[i].priority * 100) / totalPriority);
+				if (randomPriority <= crntSumPrio)
+				{
+					return banners[i];
+				}
+			}
+
+			return banners[0]; // That should never happen.
+		}
+
+		function OnLoad()
+		{
+			// Banners array.
+			var banners = new Array
+			(
+				CreateBanner("Web automation library",
+				             "Automate Internet Explorer using the language of your choice: C++, C#, VB.Net, Javascript",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             40),
+
+				CreateBanner("Quality Assurance Tool",
+				             "Write automated test scripts for your web applications using Twebst library",
+				             "Get it FREE!",
+				             "http://www.codecentrix.com/",
+				             10),
+			
+				CreateBanner("Web Testing Tool",
+				             "Automated testing accessible to everyone",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             10),
+
+				CreateBanner("Web Automation Software",
+				             "Automate web pages and forms, extract web data",
+				             "Get it FREE!",
+				             "http://www.codecentrix.com/",
+				             10),
+							 
+				CreateBanner("Web Macros for Internet Explorer",
+				             "Create complex web automation scripts and macros with Twebst library",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             10),
+
+				CreateBanner("Web Scraping Tool",
+				             "Extract content from target websites. Save web content",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             10),
+
+				CreateBanner("Web Scraping Software",
+				             "Automation software to extract web content",
+				             "Get it FREE!",
+				             "http://www.codecentrix.com/",
+				             10),
+
+				CreateBanner("Web macros for Internet Explorer",
+				             "Automatically logon to web sites, automate web pages and forms",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             10),
+
+				CreateBanner("IE extensions made easy",
+				             "Manipulate HTML DOM with Twebst library!",
+				             "Get it FREE!",
+				             "http://www.codecentrix.com/",
+				             40),
+
+				CreateBanner("Internet Explorer extension toolkit",
+				             "Speed up IE extensions development with Twebst library!",
+				             "Free Download",
+				             "http://www.codecentrix.com/",
+				             40)
+			);
+
+			var bTitle   = document.getElementById("bannerTitle");
+			var bText    = document.getElementById("bannerText");
+			var linkText = document.getElementById("linkText");
+			var banner   = GetRandomBanner(banners);
+			
+			bTitle.innerHTML   = banner.title;
+			bText.innerHTML    = banner.text;
+			linkText.innerHTML = banner.link;
+			linkText.href      = banner.url;
+		}
+		-->
+		</script>
+	</head>
+
+	<body scroll="no" onload="OnLoad()">
+		<b><span id="bannerTitle" style="font-size:16"></span></b>
+		<br>
+		<span id="bannerText" style="font-size:12"> </span>
+		<br>
+		<a id="linkText" target="_blank" href="http://www.codecentrix.com/"> </a>
+	</body>
+</html>

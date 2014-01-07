@@ -1,0 +1,100 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Browser automation - programmatic control over HTML drop-down and list box web controls with VBScript and JScript">
+<meta name="Keywords" content="automate browser, select, VBScript, drop-down, JScript, web control, combo box, option">
+<title>
+		Web browser automation - programatically select options in HTML drop-down and list-box web controls with VBScript or JScript
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;Select - web automation method</h2>
+</div>
+<h1><a href="Browser.htm
+			">Browser</a> automation method that selects options in HTML combo-box (drop-down) or list-box web controls.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		elementObj.Select(item_to_select);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>item_to_select</code> is the text or the ordinal position of the option to be selected.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Any previous selection in the HTML drop-down / listbox control is removed.<br>
+		The input parameter can be:
+		<ul>
+<li>a number that represents the zero-based ordinal position of the option to be selected.</li>
+<li>
+				a string that represents the text of the option to be selected.
+				If <a href="useRegExp.htm
+			">useRegExp</a> property is <i>true</i>:
+				<ul>
+<li>For multiple selection list-box all the options that match the input regular expression are selected.</li>
+<li>For combo-box (drop-down) and single selection list-box, the first option that matches the input regular expression is selected.</li>
+</ul>
+</li>
+</ul>
+		If no option matches the input parameter, then a browser automation exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">NOT_FOUND_ERROR</a><br>
+		If the browser automation method is applied to an <a href="Element.htm
+			">Element</a> that is not a combo-box (drop-down) or list-box control, then a browser automation exception is
+		thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+		
+		<br><br>
+		The time allocated for selecting the options is specified by the <a href="searchTimeout.htm
+			">searchTimeout</a> property. If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser objects to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true, then a script exception is thrown.		
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Assume nativeCombo is a &lt;select&gt; HTML element.
+</span><span STYLE="color: green">// Select the first item in the combo-box.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> combo   = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(nativeCombo);
+combo.<a href="Select.htm
+			">Select</a>(0);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AddSelection.htm
+			">AddSelection</a> | <a href="AddSelectionRange.htm
+			">AddSelectionRange</a> | <a href="Click.htm
+			">Click</a> | <a href="ClearSelection.htm
+			">ClearSelection</a> | <a href="Element.htm
+			">Element</a> | <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a> | <a href="InputText.htm
+			">InputText</a> | <a href="selectedOption.htm
+			">selectedOption</a> | <a href="SelectRange.htm
+			">SelectRange</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

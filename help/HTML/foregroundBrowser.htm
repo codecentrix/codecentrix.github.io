@@ -1,0 +1,80 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="C#, VB.Net programmatic control over foreground IWebBrowser2 object">
+<meta name="Keywords" content="IWebBrowser2, VB.Net MSHTML, C# web automation, IE8 recorder, foreground, web automation library, automate IE protected mode">
+<title>
+		IE automation tool - programmatic control over the foreground IE instance (IWebBrowser2) from C# web macro code
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;foregroundBrowser - web automation property</h2>
+</div>
+<h1>
+		Returns a web automation library <a href="Browser.htm
+			">Browser</a> object attached to foreground <i>Internet Explorer</i> instance (the <a href="http://msdn.microsoft.com/en-us/library/aa752127(VS.85).aspx" target="_blank">IWebBrowser2</a> with which the user is currently working).
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		var b = coreObj.foregroundBrowser;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The property is <i>null</i> if no <i>Internet Explorer</i> browser is in foreground.
+		The property returns a web automation <a href="Browser.htm
+			">Browser</a> object that matches the search condition arguments and gets programmatic control over the <a href="http://msdn.microsoft.com/en-us/library/aa752127(VS.85).aspx" target="_blank">IWebBrowser2</a> underlying IE native object.
+		This IE automation property works for all <i>Internet Explorer</i> versions: <i>IE6</i>, <i>IE7</i>, <i>IE8</i>, <i>IE9</i> and with <i>IE protected mode</i> on <i>Windows XP</i>, <i>Vista</i> and <i>Win7</i>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Make the foreground browser to navigate; start a new browser if there is no browser in foreground.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> b       = coreObj.<a href="foregroundBrowser.htm
+			">foregroundBrowser</a>;
+
+<span STYLE="color: blue">if</span> (b == <span STYLE="color: blue">null</span>)
+{
+	<span STYLE="color: green">// No foreground browser.
+</span>
+	b = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+}
+<span STYLE="color: blue">else</span>
+{
+	b.<a href="Navigate.htm
+			">Navigate</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+}
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Core.htm
+			">Core</a> | <a href="FindBrowser.htm
+			">FindBrowser</a> | <a href="StartBrowser.htm
+			">StartBrowser</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

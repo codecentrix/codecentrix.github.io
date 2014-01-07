@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="Description" content="FAQs for Twebst Web Automation Studio product. Web Automation and Web Macros for Internet Explorer IE6, IE7, IE8, IE9" />
+	<meta name="Keywords" content="faq, ie automation, web automation, web macro, redist, free license" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="Distribution" content="Global" />
+	<meta name="Author" content="Codecentrix - office@codecentrix.com" />
+
+	<title>Codecentrix | FAQ -  Web Automation Tool for Internet Explorer</title>
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+</head>
+
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="./index.html" title="Home of IE 10 Automation">Twebst</a>
+				  <div class="nav-collapse collapse">
+					<ul class="nav">
+						<li><a href="./download.html" title="Internet Explorer Automation Tool - Download">Download</a></li>
+						<!--li><a href="./ie_automation_redist.html" title="Internet Explorer Automation - Redistributable Kit">Redistributable</a></li-->
+						<li><a href="./buytwebst.html" title="Internet Explorer Automation Software - Buy">Buy</a></li>		
+						<li><a href="./contact.html">Contact</a></li>
+						<li><a href="./faq.html" title="IE automation - FAQs">FAQ</a></li>
+						<li><a href="https://groups.google.com/forum/#!forum/twebst-automation-studio" target="_blank" title="IE Automation - Google Group">Community</a></li>
+					</ul>
+				  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="span10">
+				<h3>Twebst Automation Studio - FAQs</h3>
+				<ul>
+					<li><a href="#q0">What are the restrictions for <i>Twebst Redistributable Kit</i>?</a></li>
+					<li><a href="#q9">Is it allowed to redistribute <i>Twebst Automation Studio</i>?</a></li>
+					<li><a href="#q2">Do I need to install <i>Microsoft .NET Framework</i> to run Twebst macros?</a></li>
+					<li><a href="#q3">What are the system requirements for Twebst?</a></li>
+					<li><a href="#q4">Is Windows 64 bit supported?</a></li>
+					<li><a href="#q5">Why does my script fail to start on Windows 64 bit with error: "Automation server can't create object"?</a></li>
+					<li><a href="#q6">Can I use <i>Twebst Library</i> with <i>Web Browser Control</i> in C#/<i>Windows Forms</i> project?</a></li>
+					<li><a href="#q7">I come across following error message: "Can not properly create a new browser object. It is possible that TwebstBHOPS.dll is not properly registered". What should I do?</a></li>
+					<li><a href="#q1">What are the differences between <i>Open Twebst</i> and <i>Twebst Automation Studio</i>?</a></li>
+				</ul>
+
+				<h3>Answers</h3>
+				<a name="q0"></a>
+				<h5>What are the restrictions for <i>Twebst Redistributable Kit</i>?</h5>
+				<ul>
+					<li>You are not allowed to use <i>Twebst Libray</i> as a part of another library, recorder or a general purpose
+					automation software product (like <i>Twebst Automation Studio</i>).
+					Also you are not allowed to redistribute or sell <i>Twebst Library</i> as a standalone component.
+					<br/><br/>
+					You are allowed to create software products that include <i>Twebst Libray</i> as long they add enough web automation
+					business logic, specific to a concrete problem.
+					<br/><br/>
+					See: <a href="./redistlic.html">Twebst Redistributable Kit License</a></li>
+				</ul>
+
+				<a name="q9"></a>
+				<h5>Is it allowed to redistribute <i>Twebst Automation Studio</i>?</h5>
+				<ul>
+					<li>Redistribution is not permitted, <i>Twebst Automation Studio</i> is licensed per user.</li>
+				</ul>
+
+				<a name="q2"></a>
+				<h5>Do I need to install <i>Microsoft .NET Framework</i> to run Twebst macros?</h5>
+				<ul>
+					<li>No, <i>Twebst Library</i> does NOT depend on any .NET Framework version but <i>Twebst Web Recorder</i> requires Microsoft <a target="_blank" href="http://www.microsoft.com/downloads/details.aspx?familyid=0856eacb-4362-4b0d-8edd-aab15c5e04f5">.NET Framework 2.0</a>. That means .NET Framework is only needed when creating macros and not when running them.</li>
+				</ul>				
+
+				<a name="q3"></a>
+				<h5>What are the system requirements for Twebst?</h5>
+				<ul>
+					<li><i>Twebst Automation Studio</i> was tested against Windows 8, Windows Vista, Windows XP (32 and 64 bit) with Internet Explorer 6 - 10</li>
+				</ul>
+
+				<a name="q4"></a>
+				<h5>Is Windows 64 bit supported?</h5>
+				<ul>
+					<li>Yes, <i>Windows 64-bit</i> is fully supported starting with <i>Twebst Library 2.7</i> which can be used from 32-bit and 64-bit applications and it can also automate IE 64-bit.</li>
+				</ul>
+
+				<a name="q5"></a>
+				<h5>Why does my script fail to start on Windows 64 bit with error: "Automation server can't create object"?</h5>
+				<ul>
+					<li>Prior to 2.7 version, <i>Twebst Library</i> was available only for 32 bit applications. That's why <i>.js</i> and <i>.vbs</i> Twebst <i>web macros</i> must be run by 32 bit versions of <i>wscript.exe</i> / <i>cscript.exe</i> which you may find in <i>%windir%\SysWOW64</i> directory.</li>
+				</ul>
+
+				<a name="q6"></a>
+				<h5>Can I use Twebst Library with <i>Web Browser Control</i> in C#/<i>Windows Forms</i> project?</h5>
+				<ul>
+					<li>Yes, Twebst Library can work with <i>web browser control</i> by attaching to <a target="blank" href="http://msdn.microsoft.com/en-us/library/system.windows.forms.webbrowserbase.activexinstance.aspx">ActiveXInstance</a> underlying <i>IWebBrwoser2</i> object (see <a href="./help/HTML/LnkAttachToNativeBrowser.htm">AttachToNativeBrowser</a> library method).</li>
+				</ul>
+
+				<a name="q7"></a>
+				<h5>I come across following error message: "Can not properly create a new browser object. It is possible that TwebstBHO.dll is not properly registered". What should I do?</h5>
+				<ul>
+					<li>Reinstall the product</li>
+					<li>Manually register <i>TwebstLib.dll</i> and <i>TwebstBHO.dll</i> using <i>regsvr32.exe</i> tool (on Vista/Win7 Run as admin)</li>
+				</ul>
+
+				<a name="q1"></a>
+				<h5>What are the differences between <a href="http://open-twebst.codecentrix.com/" target="_blank">Open Twebst</a> and <i>Twebst Automation Studio</i>?</h5>
+					<ul>
+						<li>Some functions are not available in the open source edition. Also, <i>Open Twebst Web Recorder</i> does not generate <a href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications" target="_blank">VBA</a> code. Here is the <a href="./help/HTML/HelpCompEdit.htm">list of missing features</a> in the open source edition.</li>
+					</ul>
+			</div>
+		</div>
+		
+		<hr>
+		<footer>
+			<center>
+				<a href="./help/HTML/HelpIndex.htm" title="IE Automation Library - API Reference">Documentation</a> |
+				<a href="./help/HTML/LnkTutorials.htm" title="IE6 - IE10 Macros and Automation - Tutorials">Tutorials</a> | 
+				<a href="./contact.html">Contact</a> |
+				<a href="http://groups.google.com/group/twebst-automation-studio" target="_blank" title="IE Automation and Macros - Discussion Group">Community</a> | 
+				<a target="_blank" href="http://www.linkedin.com/e/8ys35q-geiov44j-6b/vgh/3455722/" title="Join us on LinkedIn"><img src="./images/linkedin_small.png" alt="Twebst on LinkedIn"/></a>
+				<a target="_blank" href="http://twitter.com/codecentrix" title="Follow us on Twitter"><img src="./images/twitter_small.png" alt="Twebst on Twitter"/></a>
+					
+				<br><br>
+				<p>&copy; Codecentrix 2013</p>
+			<center>
+		</footer>
+	</div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+sc_project=1010390; 
+sc_invisible=1; 
+sc_partition=9; 
+sc_security="a4cc6c6f"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter" /></noscript>
+<!-- End of StatCounter Code -->
+
+<!-- Start of Google Analytics Code -->
+<script type="text/javascript">
+window['ga-disable-UA-6840573-2'] = true;
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6840573-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- End of Google Analytics Code -->
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Web automation in VBScript and JScript - manage web page loading timeout">
+<meta name="Keywords" content="web automation, web page timeout, web page load, VBScript web automation">
+<title>
+		VBScript, JScript web automation - set the timeout used to wait the browser page to finish loading
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;loadTimeout - web automation property</h2>
+</div>
+<h1>
+		Web automation property that sets or retrieves the amount of time web automation methods wait the web page to load.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.loadTimeout = numericValue;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd><i>numericValue</i> is the time to wait in milliseconds.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+<p>The default value of this web automation property is 60,000 milliseconds (one minute).<br>
+		If <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is <i>true</i>, then a web automation exception is thrown when load timeout expires in one
+		of the methods bellow. In this case, the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>.<br>
+		The property affects the following web automation methods:	<a href="AddSelection.htm
+			">AddSelection</a>, <a href="AddSelectionRange.htm
+			">AddSelectionRange</a>, <a href="FindAllBrowsers.htm
+			">FindAllBrowsers</a>, <a href="FindElement.htm
+			">FindElement</a>, <a href="FindChildElement.htm
+			">FindChildElement</a>, <a href="FindFrame.htm
+			">FindFrame</a>, <a href="FindChildFrame.htm
+			">FindChildFrame</a>,
+		<a href="FindAllElements.htm
+			">FindAllElements</a>, <a href="FindChildrenElements.htm
+			">FindChildrenElements</a>, <a href="FindAllFrames.htm
+			">FindAllFrames</a>, <a href="FindChildrenFrames.htm
+			">FindChildrenFrames</a>, <a href="FindParentElement.htm
+			">FindParentElement</a>, <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a>, <a href="Select.htm
+			">Select</a>, <a href="selectedOption.htm
+			">selectedOption</a>, <a href="SelectRange.htm
+			">SelectRange</a>, <a href="WaitToLoad.htm
+			">WaitToLoad</a>.
+		These methods wait the web page to be completly loaded before they continue.</p>
+<p>If <a href="loadTimeout.htm
+			">loadTimeout</a> is zero then find methods do not wait the page to complete and no script exception is thrown.</p>
+</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code>
+None.
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="lastError.htm
+			">lastError</a> | <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> | <a href="searchTimeout.htm
+			">searchTimeout</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

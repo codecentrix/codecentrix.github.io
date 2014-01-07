@@ -1,0 +1,91 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="">
+<meta name="Keywords" content="IHTMLSelectElement, C# MSHTML, automate dropdown, IE macro recorder, IE9 recorder, IE macro">
+<title>
+		IE9 macro recorder - automate HTML dropdown and list boxe controls in C#
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;GetAllSelectedOptions - web automation method</h2>
+</div>
+<h1>
+		Retrieves the collection of selected options in a HTML list-box ( <a href="http://msdn.microsoft.com/en-us/library/aa768872(VS.85).aspx" target="_blank">IHTMLSelectElement</a> ) control.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		var optionsList = elementObj.GetAllSelectedOptions();
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		If no option is selected inside dropdown/list-box then an empty IE automation <a href="ElementList.htm
+			">ElementList</a> object is returned after <a href="searchTimeout.htm
+			">searchTimeout</a> has expired. It can be applied only to &lt;select&gt; objects, otherwise
+		a script exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+		<br><br>
+		The time allocated for finding the selected options list is specified by the <a href="searchTimeout.htm
+			">searchTimeout</a> property. If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser objects to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true, then a IE macro exception is thrown.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Displays all selected options in a select object.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/tests/qt3.htm"</span>);
+<span STYLE="color: blue">var</span> select  = browser.<a href="FindElement.htm
+			">FindElement</a>(<span STYLE="color: red">"select"</span>);
+<span STYLE="color: blue">var</span> optList = select.<a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a>();
+<span STYLE="color: blue">var</span> text    = <span STYLE="color: red">""</span>;
+
+<span STYLE="color: blue">for</span> (<span STYLE="color: blue">var</span> i = 0; i &lt; optList.length; ++i)
+{
+	text += optList.item(i).text;
+	text += <span STYLE="color: red">"\n"</span>;
+}
+
+WScript.Echo(text);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AddSelection.htm
+			">AddSelection</a> | <a href="AddSelectionRange.htm
+			">AddSelectionRange</a> | <a href="ClearSelection.htm
+			">ClearSelection</a> | <a href="Element.htm
+			">Element</a> | <a href="ElementList.htm
+			">ElementList</a> | <a href="Select.htm
+			">Select</a> | <a href="selectedOption.htm
+			">selectedOption</a> | <a href="SelectRange.htm
+			">SelectRange</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

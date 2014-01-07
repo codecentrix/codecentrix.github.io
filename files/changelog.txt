@@ -1,0 +1,64 @@
+-------------------------------------------------------------------------------------------------
+Version 2.5 (05-Jul-2010)
+- NEW: ClosePopup web automation method
+- NEW: ClosePrompt web automation method
+- NEW: closeBrowserPopups web automation property
+- NEW: OpenNewTab web automation method
+- NEW: tabList web automation property
+- NEW: activeTab web automation property
+- NEW: isTabActive web automation property
+- NEW: asyncHtmlEvents web automation property
+- ENH: RightClick support added in web recorder 
+- ENH: index attribute added to FindFrame method
+- BUG: minor fixes in web automation library, web recorder and help system
+
+-------------------------------------------------------------------------------------------------
+Version 2.1 (05-Feb-2010)
+- NEW: COM interface for VBA (Excel, Word)
+- NEW: web recorder for VBA
+- BUG: various fixes in library and web recorder
+- NEW: selectedOption property
+- NEW: GetAllSelectedOptions property
+- ENH: timeouts for combo/list selection methods
+- NEW: tutorials
+
+-------------------------------------------------------------------------------------------------
+Version 2.0 (3-Nov-2009)
+
+- NEW: Web Recorder
+- BUG: fixes and optimizations
+- NEW: index attribute in FindElement and FindChildElement methods
+- NEW: element.Check, element.Uncheck methods
+- NEW: element.isChecked property
+- ENH: free version can be registered
+
+-------------------------------------------------------------------------------------------------
+Version 1.40 (11-May-2009)
+
+- NEW: IE8 is now supported
+- ENH: core.AttachToNative* methods work now with hosted IE browser control
+- BUG: various fixes
+- NEW: core.foregroundBrowser property
+- NEW: core.productName property
+- NEW: core.productVersion property
+- NEW: core.GetClipboardText method
+- NEW: core.SetClipboardText method
+- NEW: core.AttachToWnd method
+- NEW: core.NativeWindowToNativeBrowser method
+- NEW: core.NativeWindowToNativeDocument method
+- NEW: browser.FindModalHtmlDialog method
+- NEW: browser.FindModelessHtmlDialog method
+- NEW: element.GetAttribute method
+- NEW: element.SetAttribute method
+- NEW: element.RemoveAttribute method
+- NEW: element.tagName property
+- NEW: element.FindParentElement method
+
+-------------------------------------------------------------------------------------------------
+Version 1.21 (25-Oct-2008)
+- Starting
+
+
+NEW - new feature
+BUG - bug fix
+ENH - enhancement of an existing feature

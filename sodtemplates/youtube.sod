@@ -1,0 +1,41 @@
+<template type="1" name="Youtube" version="1.0.0" sodinstaller="1.0.0" categories="Login">
+	<description>Automatically log on Youtube site.</description>
+	<ico name="youtube.ico">00000100010010100000010020006804000016000000280000001000000020000000010020000000000000000000130b0000130b00000000000000000000ffffffffffffffff8383ffff6969ffff6e6effff6161ffff5959ffff5a5affff5a5affff5656ffff6464ffff7070ffff6363ffff8282ffffffffffffffffffffffffffff5d5dffff2c2cffff4141ffff2828ffff3838ffff4444ffff2e2effff3131ffff5151ffff2e2effff0f0fffff6565ffff1d1dffff5a5affffffffffffffffffff3c3cffff0a0affffffffffff3333ffffd4d4ffffffffffffa5a5ffffb9b9ffffffffffffaeaeffff7c7cffffffffffffe0e0ffff1616ffffffffffffffffffff3333ffff0a0affffffffffff3434ffffcbcbffff7272ffffa5a5ffffb0b0ffff6363ffffb3b3ffffc9c9ffff5757ffff7979ffff2222ffffffffffffffffffff3333ffff0b0bfffffbfbffff3333ffffc6c6ffff8585ffffa2a2ffffacacffff5b5bffffacacffffb7b7ffffdadaffffddddffff0f0fffffffffffffffffffff3434ffff0202fffff6f6ffff2727ffffe6e6ffff9e9effffb9b9ffffa1a1ffffefefffffb9b9ffffa0a0ffffe2e2ffffdfdfffff0202ffffffffffffffffffff3333ffff0505ffffffffffff4a4affff4a4affff4d4dffff3535ffffdedeffffb2b2ffff3737ffff1212ffffa6a6ffff2b2bffff3d3dffffffffffffffffffff1919ffffd8d8ffffffffffffffffffff2727ffff1010ffff0000fffff2f2ffff2f2fffff0000ffff2626ffff1e1effffa9a9ffff7676ffffffffffffffffffffafafffff2626ffff1312ffff1e20ffff3333ffff3636ffff3838ffff1e1fffff2e2effff5757ffff8688ffffc2c2ffffd1d1ffffaaaaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffccccccffeeeeeeff222222ff000000ff222222ffffffffff333333ff000000ff000000ffffffffffffffffffffffffffffffffffffffffffffffffff000000ffccccccffffffffff222222ffeeeeeeff111111ffbbbbbbff000000ff888888ff111111ffffffffffffffffffffffffffffffffffffffffffeeeeeeff000000ffccccccffffffffff222222ffeeeeeeff111111ffbbbbbbff000000ffccccccff111111ffffffffffffffffffffffffffffffffffffffffff777777ff000000ff555555ffeeeeeeff222222ff000000ff222222ffffffffff000000ffccccccff111111ffffffffffffffffffffffffffffffffffddddddff000000ff888888ff000000ffddddddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000ffffffffff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</ico>
+	<preinstall/>
+	<sod>
+		<![CDATA[
+// FREE code from CODECENTRIX
+// http://www.codecentrix.com/
+// http://codecentrix.blogspot.com/
+
+// Open a browser or use the browser in foreground and navigate to login page.
+var core    = new ActiveXObject("Twebst.Core");
+var browser = core.foregroundBrowser;
+
+if (browser == null)
+{
+	// No browser in foreground.
+	browser = core.StartBrowser("http://www.youtube.com/login?next=/");
+}
+else
+{
+	browser.Navigate("http://www.youtube.com/login?next=/");
+}
+
+// Find login fields.
+var u = browser.FindElement("input text", "name=username");
+var p = browser.FindElement("input password");
+var a = browser.FindElement("a", "id=button-signin-link");
+
+// Log on to site.
+if ((u != null) && (p != null) && (a != null))
+{
+	u.InputText("UUUUUUUUUU");
+	p.InputText("PPPPPPPPPP");
+	a.Click();
+}
+
+]]>
+	</sod>
+	<postinstall/>
+</template>

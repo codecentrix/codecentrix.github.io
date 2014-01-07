@@ -1,0 +1,75 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Web automation/browser automation - know when your browser finished loading the HTML DOM">
+<meta name="Keywords" content="web automation, IE automation, VBScript, automate browser loading">
+<title>
+		VBScript IE automation - wait the browser page to finish loading
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;isLoading - web automation property</h2>
+</div>
+<h1>
+		Web automation property that returns a boolean value indicating whether the browser is engaged in a navigation/loading operation.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var loading = browserObj.isLoading;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Returns <i>true</i> if the browser is engaged in a navigation or loading operation, <i>false</i> otherwise.
+		In case of failure this property throws a web automation exception and the <a href="lastError.htm
+			">lastError</a> property of the <a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">FAIL_ERROR</a> or <a href="Core.htm#constants">BROWSER_CONNECTION_LOST_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com"</span>);
+
+WScript.Sleep(100); <span STYLE="color: green">// Give a chance to the browser to start navigation.
+</span><span STYLE="color: blue">while</span> (newBrowser.<a href="isLoading.htm
+			">isLoading</a>)
+{
+	<span STYLE="color: green">// Wait the browser to load.
+</span>
+}
+
+WScript.Echo(newBrowser.title);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Navigate.htm
+			">Navigate</a> | <a href="WaitToLoad.htm
+			">WaitToLoad</a> | <a href="navigationError.htm
+			">navigationError</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

@@ -1,0 +1,262 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate Internet Explorer browser with web macros using the language of your choice: VBA, C#, VB.Net, VBScript, C++">
+<meta name="Keywords" content="IE9 macro, web macro, IWebBrowser2, VBScript, C# MSHTML, Excel, VBA, HTML collection, web automation, automate frame, iframe">
+<title>
+		IE6, IE7, IE8, IE9 macro - automate IWebBrowser2 in C#, VBA/Excel, VBScript
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;Browser - IE macro object</h2>
+</div>
+<dl>
+<dd>
+<p>
+		This IE macro object represents an <i>Internet Explorer</i> instance.<br>
+		It provides web macro methods for searching <a href="Element.htm
+			">Element</a> and <a href="Frame.htm
+			">Frame</a> web automation objects inside the web page DOM hierarchy, and for automating various browser actions (navigate, close, show/hide browser window).
+	</p>
+</dd>
+<dd><code>&nbsp;
+			var browserObj = coreObj.FindBrowser(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var browserObj = coreObj.FindAllBrowsers(Search conditions)(index);
+		</code></dd>
+<dd><code>&nbsp;
+			var browserObj = coreObj.AttachToNativeBrowser(native browser);
+		</code></dd>
+<dd><code>&nbsp;
+			var browserObj = frameObj.parentBrowser;
+		</code></dd>
+<dd><code>&nbsp;
+			var browserObj = elementObj.parentBrowser;
+		</code></dd>
+</dl>
+<div class="section">Methods</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="Close.htm
+			">Close</a></td>
+<td width="80%">Closes the <i>Internet Explorer</i> instance represented by the browser object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="ClosePopup.htm
+			">ClosePopup</a></td>
+<td width="80%">Closes a <i>window.alert</i> or a <i>window.confirm</i> popup window in <i>Internet Explorer</i>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="ClosePrompt.htm
+			">ClosePrompt</a></td>
+<td width="80%">Closes a <i>window.prompt</i> popup window in <i>Internet Explorer</i>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindAllElements.htm
+			">FindAllElements</a></td>
+<td width="80%">Searches in the current browser, the collection of all HTML elements that verify a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindAllFrames.htm
+			">FindAllFrames</a></td>
+<td width="80%">Searches in the current browser, the collection of all HTML <i>frame</i> and <i>iframe</i> objects that verify a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindElement.htm
+			">FindElement</a></td>
+<td width="80%">Searches in the current browser, an HTML element that verifies a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindFrame.htm
+			">FindFrame</a></td>
+<td width="80%">Searches in the current browser, a HTML <i>frame</i> or <i>iframe</i> that verifies a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindModalHtmlDialog.htm
+			">FindModalHtmlDialog</a></td>
+<td width="80%">Searches a <a href="Frame.htm
+			">Frame</a> object in the current browser corresponding to a HTML modal dialog box.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindModelessHtmlDialog.htm
+			">FindModelessHtmlDialog</a></td>
+<td width="80%">Searches a <a href="Frame.htm
+			">Frame</a> object corresponding to a modeless HTML dialog box that verifies a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Navigate.htm
+			">Navigate</a></td>
+<td width="80%">Navigates the browser to a given URL.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="OpenNewTab.htm
+			">OpenNewTab</a></td>
+<td width="80%">Opens a new <i>Internet Explorer</i> tab window and returns a <a href="Browser.htm
+			">Browser</a> web macro object connected to it.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a></td>
+<td width="80%">Shows, hides, maximizes, minimizes, restores or puts in foreground the browser window.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="WaitToLoad.htm
+			">WaitToLoad</a></td>
+<td width="80%">Waits the browser to load and check it against a list of <a href="SearchCondition.htm">search conditions</a>.</td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">Properties</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="activeTab.htm
+			">activeTab</a></td>
+<td width="80%">Retrieves a <a href="Browser.htm
+			">Browser</a> object corresponding to the active tab inside a top level IE frame.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="coreProp.htm">core</a></td>
+<td width="80%">Returns a reference to the parent <a href="Core.htm
+			">Core</a> IE macro object of the browser.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="ieWindow.htm
+			">ieWindow</a></td>
+<td width="80%">Returns the handle for <i>Inernet Explorer_Server</i> window of the <i>Internet Explorer</i> instance represented by the current <a href="Browser.htm
+			">Browser</a> web macro object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="isLoading.htm
+			">isLoading</a></td>
+<td width="80%">Returns a boolean value indicating whether the browser is engaged in a navigation operation.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="isTabActive.htm
+			">isTabActive</a></td>
+<td width="80%">Returns a boolean value indicating whether the current tab is active or not.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="nativeBrowser.htm
+			">nativeBrowser</a></td>
+<td width="80%">Returns a native <i>Internet Explorer</i> browser object ( <a href="http://msdn.microsoft.com/en-us/library/aa752127.aspx" target="_blank">IWebBrowser2</a> ). </td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="navigationError.htm
+			">navigationError</a></td>
+<td width="80%">Returns the browser navigation error code.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="processId.htm
+			">processId</a></td>
+<td width="80%">Returns the process ID of the <i>Internet Explorer</i> instance represented by the <a href="Browser.htm
+			">Browser</a> object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="tabList.htm
+			">tabList</a></td>
+<td width="80%">Returns a <a href="BrowserList.htm
+			">BrowserList</a> web automation object corresponding to all tabs windows inside the same <i>IEFrame</i> top level browser window.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="tabWindow.htm
+			">tabWindow</a></td>
+<td width="80%">Returns the handle for <i>TabWindowClass</i> window of the <i>Internet Explorer 7</i> instance represented by the current <a href="Browser.htm
+			">Browser</a> web macro object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="threadId.htm
+			">threadId</a></td>
+<td width="80%">Returns the thread ID of the <i>Internet Explorer</i> window represented by the <a href="Browser.htm
+			">Browser</a> IE macro object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="title.htm
+			">title</a></td>
+<td width="80%">Returns the title of the web page.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="topFrame.htm
+			">topFrame</a></td>
+<td width="80%">Returns a reference to the top <a href="Frame.htm
+			">Frame</a> IE macro object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="topWindow.htm
+			">topWindow</a></td>
+<td width="80%">Returns the handle for <i>IEFrame</i> top window of the <i>Internet Explorer 7</i> instance represented by the current <a href="Browser.htm
+			">Browser</a> IE macro object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="url.htm
+			">url</a></td>
+<td width="80%">Returns the URL for the current HTML document.</td>
+</tr>
+</table>
+</dd>
+</dl><a name="#constants"></a><div class="section">Constants</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_IN_FOREGROUND</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to bring the browser window in foreground. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_HIDE</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to hide the browser window. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_MAXIMIZE</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to maximize the browser window. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_MINIMIZE</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to minimize the browser window. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_RESTORE</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to restore the browser window. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Browser.htm#constants">SHOW_VISIBLE</a></td>
+<td width="80%">Used by <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> to make the browser window visible. <span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br></td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="BrowserList.htm
+			">BrowserList</a> | <a href="Element.htm
+			">Element</a> | <a href="ElementList.htm
+			">ElementList</a> | <a href="Frame.htm
+			">Frame</a> | <a href="FrameList.htm
+			">FrameList</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+							2013 CodeCentrix Software. All rights reserved.
+						</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

@@ -1,0 +1,26 @@
+body {
+	color:            #333333;
+	background-color: #FFD595;
+	margin:           8;
+}
+
+/* links */
+a, a:visited {
+	font-family:     arial;
+	text-decoration: none;
+	color:           #FF006E;
+	background:      inherit;
+	font-size:       20;
+}
+
+a:hover {
+	font-family:     arial;
+	color:           #FF006E;
+	background:      inherit;
+	text-decoration: underline;
+	font-size:       20;
+}
+
+span {
+	font-family: arial;
+}

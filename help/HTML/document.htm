@@ -1,0 +1,65 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate IE HTML documents from .Net with web automation library">
+<meta name="Keywords" content="IE automation, HTML document, web automation library">
+<title>
+		.Net IE automation of IHTMLDocument2 browser document
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;document - web automation property</h2>
+</div>
+<h1>
+		Returns the native HTML <i>document</i> object ( <a href="http://msdn.microsoft.com/en-us/library/aa752574.aspx" target="_blank">IHTMLDocument2</a> ) from the current IE automation library <a href="Frame.htm
+			">Frame</a> object.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Frame.htm
+			">Frame</a></dd>
+<dd><code>&nbsp;
+		var doc = frameObj.document;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		This property gives access to all methods and properties of the HTML native <i>document</i> object.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+
+<span STYLE="color: blue">var</span> doc = newBrowser.<a href="topFrame.htm
+			">topFrame</a>.document;
+WScrip.Echo(<span STYLE="color: red">"The document size is: "</span> + doc.fileSize);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Frame.htm
+			">Frame</a> | <a href="nativeFrame.htm
+			">nativeFrame</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

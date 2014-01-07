@@ -1,0 +1,67 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="When Internet Explorer automation fails, find the HTTP navigation error code in VBA, C#, VBScript">
+<meta name="Keywords" content="Internet Explorer Automation, HTTP error code, VBA, C# MSHTML, web navigation">
+<title>
+		Internet Explorer Automation - error management
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;navigationError - web automation property</h2>
+</div>
+<h1>
+		Internet Explorer automation property that returns the browser HTTP <a href="http://msdn.microsoft.com/library/default.asp?url=/workshop/browser/webbrowser/reference/constants/statuscodesvb.asp" target="_blank">navigation error code</a>.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var err = browserObj.navigationError;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		If no HTTP error has occured the returned code is zero.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Navigate to an invalid url and display the navigation error code.
+</span><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"a"</span>);
+
+newBrowser.<a href="WaitToLoad.htm
+			">WaitToLoad</a>();
+WScript.Echo(newBrowser.<a href="navigationError.htm
+			">navigationError</a>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Navigate.htm
+			">Navigate</a> | <a href="lastError.htm
+			">lastError</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

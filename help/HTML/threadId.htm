@@ -1,0 +1,69 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Get the thread ID of a IE browser or &quot;Internet Explorer_Server&quot; window">
+<meta name="Keywords" content="C# MSHTML, thread, web automation, Internet Explorer automation">
+<title>
+		C# MSHTML programming - get "Internet Explorer_Server" thread ID
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;threadId - web automation property</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Internet Explorer automation property that returns the thread ID of the <i>Internet Explorer</i> window represented by the current <a href="Browser.htm
+			">Browser</a> object.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var tid = browserObj.threadId;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The returned thread ID can be used in <a href="SearchCondition.htm">Search conditions</a> for <a href="FindBrowser.htm
+			">FindBrowser</a> and <a href="FindAllBrowsers.htm
+			">FindAllBrowsers</a> web automation methods.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+WScript.Echo(newBrowser.<a href="threadId.htm
+			">threadId</a>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="FindBrowser.htm
+			">FindBrowser</a> | <a href="FindAllBrowsers.htm
+			">FindAllBrowsers</a> | <a href="foregroundBrowser.htm
+			">foregroundBrowser</a> | <a href="processId.htm
+			">processId</a> | <a href="useRegExp.htm
+			">useRegExp</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

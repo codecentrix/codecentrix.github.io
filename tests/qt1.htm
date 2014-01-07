@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<title>Codecentrix - Twebst quick tour (1 of 4)</title>
+		<META content="Twebst is a COM library that automates Internet Explorer browser. With its help one can write scripts or programs that automate: regressin tests of web application, web actions, data entry and form filling, login on web sites, web data extraction, navigation on complex sites."
+			name="description">
+		<META content="Twebst, web script, record script, web spy, web macro, macro, account login, fill login forms, fill web forms, regression test, automate browser, macro recorder, data entry, data extraction, record action"
+			name="keywords">
+		<link href="./css/tests.css" rel="stylesheet" type="text/css">
+
+<script language="javascript">
+var STATE_INIT     = 0;
+var STATE_NUMBER   = 1;
+var STATE_OPERATOR = 2;
+var g_calcState    = STATE_INIT;
+var g_calcEdit     = null;
+var g_result       = 0;
+var g_operator     = "";
+var g_fail         = 0;
+
+function OnLoad()
+{
+	g_calcEdit       = document.getElementById("CalculatorEdit");
+	g_calcEdit.value = "0";
+	g_calcEdit.style.textAlign = "right";
+}
+
+function DoClick()
+{
+	var source = window.event.srcElement;
+	if ((source.tagName.toLowerCase() != "input") || (source.type.toLowerCase() != "button"))
+	{
+		// Not a button. Do nothing.
+		return;
+	}
+
+	var btnSymbol = source.value.split(" ")[1];
+	if (btnSymbol == "C")
+	{
+		g_calcEdit.value = "0";
+		g_calcState      = STATE_INIT;
+		g_result         = 0;
+		g_operator       = "";
+		return;
+	}
+
+	if ((0 <= btnSymbol) && (btnSymbol <= "9"))
+	{
+		if (g_calcState == STATE_INIT)
+		{
+			g_calcEdit.value = btnSymbol;
+			g_calcState      = STATE_NUMBER;
+		}
+		else if (g_calcState == STATE_NUMBER)
+		{
+			g_calcEdit.value = g_calcEdit.value + btnSymbol;
+		}
+		else
+		{
+			g_result         = parseInt(g_calcEdit.value);
+			g_calcEdit.value = btnSymbol;
+			g_calcState      = STATE_NUMBER;
+		}
+
+		return;
+	}
+
+	if ((btnSymbol == "+") || (btnSymbol == "-") || (btnSymbol == "/") || (btnSymbol == "*"))
+	{
+		if (g_calcState != STATE_INIT)
+		{
+			g_operator  = btnSymbol;
+			g_calcState = STATE_OPERATOR;
+		}
+		
+		return;
+	}
+
+	// At this point btnSymbol is "="
+	if (g_calcState == STATE_NUMBER)
+	{
+		g_result += g_fail;
+		g_fail    = g_fail ? 0 : 1;
+
+		if (g_operator == "+")
+		{
+			g_result += parseInt(g_calcEdit.value);
+			g_calcEdit.value = g_result;
+		}
+		else if (g_operator == "-")
+		{
+			g_result -= parseInt(g_calcEdit.value);
+			g_calcEdit.value = g_result;
+		}
+		else if (g_operator == "/")
+		{
+			g_result /= parseInt(g_calcEdit.value);
+			g_calcEdit.value = g_result;
+		}
+		else if (g_operator == "*")
+		{
+			g_result *= parseInt(g_calcEdit.value);
+			g_calcEdit.value = g_result;
+		}
+
+		g_operator = "";
+	}
+}
+			</script>
+	</head>
+	<body onload="OnLoad()">
+		<h1 class="topicHighlight">&nbsp;<i>Twebst</i> quick tour (1 of 4)</h1>
+		<h3><font color="green"><b>Automate web application regression testing.</b></font></h3>
+		<table>
+			<tr>
+				<td>
+					<table border="1" onclick="DoClick()">
+						<tr>
+							<td colspan="4"><input type="text" id="CalculatorEdit" readonly NAME="CalculatorEdit"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" value=" 7 "></td>
+							<td align="center"><input type="button" value=" 8 "></td>
+							<td align="center"><input type="button" value=" 9 "></td>
+							<td align="center"><input type="button" value=" / "></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" value=" 4 "></td>
+							<td align="center"><input type="button" value=" 5 "></td>
+							<td align="center"><input type="button" value=" 6 "></td>
+							<td align="center"><input type="button" value=" * "></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" value=" 1 "></td>
+							<td align="center"><input type="button" value=" 2 "></td>
+							<td align="center"><input type="button" value=" 3 "></td>
+							<td align="center"><input type="button" value=" - "></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="button" value=" 0 "></td>
+							<td align="center"><input type="button" value=" C "></td>
+							<td align="center"><input type="button" value=" = "></td>
+							<td align="center"><input type="button" value=" + "></td>
+						</tr>
+					</table>
+				</td>
+
+				<td valign="top">
+					<font face="courier">
+						<ul>
+						</ul>
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td id="next_step" colspan=2 align="right">
+					<!--a href="./qt2.htm">Next>></a-->
+				</td>
+			</tr>
+		</table>
+
+		<hr>
+		<center>
+			<font face="Arial, Helvetica, sans-serif"><b>© 2009 CodeCentrix Software. All rights reserved.</b></font>
+		</center>
+		
+        <!-- Start of StatCounter Code -->
+        <script type="text/javascript">
+        var sc_project=4128216; 
+        var sc_invisible=1; 
+        var sc_partition=49; 
+        var sc_click_stat=1; 
+        var sc_security="0dd6284d"; 
+        </script>
+
+        <script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+        <noscript><img src="http://c.statcounter.com/4128216/0/0dd6284d/1/" /></noscript>
+        <!-- End of StatCounter Code -->
+
+	</body>
+</html>

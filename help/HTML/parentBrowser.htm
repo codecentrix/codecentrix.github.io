@@ -1,0 +1,74 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate IE browser from Excel - get the IWebBrowser2 object from MSHTML element or frame/iframe">
+<meta name="Keywords" content="IE automation, VBA, Excel, IWebBrowser2, IHTMLElement, IHTMLWindow2, MSHTML, frame, iframe">
+<title>
+		VBA IE automation - get IWebBrowser2 out of an IHTMLElement or IHTMLWindow2 frame/iframe in Excel
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;parentBrowser - web automation propety</h2>
+</div>
+<h1>
+		IE automation property that returns the parent <a href="Browser.htm
+			">Browser</a> object of the current <a href="Frame.htm
+			">Frame</a> or <a href="Element.htm
+			">Element</a>.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Frame.htm
+			">Frame</a>, <a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		var b = obj.parentBrowser;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		This web automation property can be useful if you already have a native <i>frame</i> or <i>element</i> and you need the parent <a href="Browser.htm
+			">Browser</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// You have a native element "native" and you need the parent Browser object.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> e       = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(native);
+<span STYLE="color: blue">var</span> b       = e.<a href="parentBrowser.htm
+			">parentBrowser</a>;
+
+b.<a href="Navigate.htm
+			">Navigate</a>(<span STYLE="color: red">"htp://www.codecentrix.com"</span>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Frame.htm
+			">Frame</a> | <a href="Element.htm
+			">Element</a> | <a href="parentElement.htm
+			">parentElement</a> | <a href="parentFrame.htm
+			">parentFrame</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

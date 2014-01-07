@@ -1,0 +1,71 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="IE7 - IE9 tabs (TabWindowClass) management with VBA/Excel, C#, VB.Net, VBScript, JScript">
+<meta name="Keywords" content="IE automation, TabWindowClass, C# MSHTML, automate IE tab, IEFrame, Excel, VBA">
+<title>
+		IE9 tab automation - get programmatic control over IE tabs (TabWindowClass) with C#, VB.Net, VBA/Excel, JScript
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;activeTab - web automation property</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		This IE automation property retrieves a <a href="Browser.htm
+			">Browser</a> object corresponding to the active tab inside a top level IE frame.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var theTab = browserObj.activeTab;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><b><u>This property is available only for Internet Explorer 7 or higher.</u></b><br>
+		This IE automation property returns a <a href="Browser.htm
+			">Browser</a> web macro object corresponding to the active tab inside
+		the top level IE frame window of the caling tab (the one for which <a href="activeTab.htm
+			">activeTab</a> property was called against).
+		<br><br>
+		The property throws a web automation exception if the version of Internet Explorer is not 7 or higher		
+		and the <a href="lastError.htm
+			">lastError</a> property of the core object is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code>	
+None.
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Close.htm
+			">Close</a> | <a href="isTabActive.htm
+			">isTabActive</a> | <a href="OpenNewTab.htm
+			">OpenNewTab</a> | <a href="tabList.htm
+			">tabList</a> | <a href="tabWindow.htm
+			">tabWindow</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

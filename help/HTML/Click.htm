@@ -1,0 +1,74 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate HTML buttons, anchors, submit, images click from any programming language: C++ C# VBScript JScript">
+<meta name="Keywords" content="browser automation, web automation, simulate click, web testing, web control">
+<title>
+		Web Automation - simulate click on web controls (anchors, buttons, checkboxes, radios, submit-reset button, images)
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;Click - web automation method</h2>
+</div>
+<h1>
+		Web automation method that simulates a click on a HTML web control.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		elementObj.Click();
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+			None.
+		<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		This web automation method simulates a click on any HTML element using hardware or <i>Internet Explorer</i> events,
+		depending on <a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a> property. All necessary HTML events are fired up to simulate user's behavior
+		(<b><i>onmouseover</i></b>, <b><i>onmousemove</i></b>, <b><i>onmousedown</i></b>, <b><i>onbeforeactivate</i></b>, <b><i>onactivate</i></b>,
+		<b><i>onfocusin</i></b>, <b><i>onfocus</i></b>, <b><i>onmouseup</i></b>, <b><i>onclick</i></b>).
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+
+<span STYLE="color: blue">var</span> element = browser.<a href="FindElement.htm
+			">FindElement</a>(<span STYLE="color: red">"a"</span>, <span STYLE="color: red">"text=Download"</span>);
+element.<a href="Click.htm
+			">Click</a>();
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a> | <a href="InputText.htm
+			">InputText</a> | <a href="RightClick.htm
+			">RightClick</a> | <a href="Select.htm
+			">Select</a> | <a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

@@ -1,0 +1,17 @@
+A:VISITED {
+	color : #339900;
+}
+
+A:HOVER {
+	color : Orange;
+}
+
+A{
+	color : #339900;
+}
+
+.topicHighlight
+{
+	color: black;
+	background-color: silver;
+}

@@ -1,0 +1,66 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="IE automation - programatically close browser security/error/auto complete popups in C#, VB.Net, VBScript, JScript, WSH">
+<meta name="Keywords" content="Internet Explorer 10 Automation, auto complete, C#, VB.Net, web macros">
+<title>
+		IE9 automation - automatically close browser popups with .Net and VBA web macros
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;closeBrowserPopups - web automation property</h2>
+</div>
+<h1>
+		IE automation property specifying if IE browser popups (security alerts, auto complete, errors) are automatically closed.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.closeBrowserPopups = true;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The default value of this web automation property is <i>false</i>. If set to <i>true</i>, every web automation library method/property will first close browser popups.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Automatically close IE popups (Security alerts, Errors and Auto complete) as they appear.
+</span><span STYLE="color: blue">var</span> core = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+core.<a href="closeBrowserPopups.htm
+			">closeBrowserPopups</a> = <span STYLE="color: blue">true</span>;
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="asyncHtmlEvents.htm
+			">asyncHtmlEvents</a> | <a href="Browser.htm
+			">Browser</a> | <a href="Close.htm
+			">Close</a> | <a href="ClosePopup.htm
+			">ClosePopup</a> | <a href="ClosePrompt.htm
+			">ClosePrompt</a> | <a href="FindModalHtmlDialog.htm
+			">FindModalHtmlDialog</a> | <a href="FindModelessHtmlDialog.htm
+			">FindModelessHtmlDialog</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

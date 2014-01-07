@@ -1,0 +1,96 @@
+<HTML>
+<BODY>
+<SCRIPT LANGUAGE="JScript">
+
+try
+{
+	/////////////////////////////////////////////////////////////////
+	// FREE code from CODECENTRIX
+	// http://www.codecentrix.com/
+	// http://codecentrix.blogspot.com/
+	/////////////////////////////////////////////////////////////////
+
+	// To install the context menu item the following registry key is needed:
+	// [HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt\MakeLink: use clicked text as link]
+	// Default value point to this file.
+	
+	var wnd   = external.menuArguments;
+	var doc   = wnd.document;
+    var evnt  = wnd.event;
+    var body  = doc.body;
+	
+	var selection = doc.selection;
+	var range     = selection.createRange();
+
+	if (range.text == "")
+	{
+		// Select empty range at click point.
+		range = body.createTextRange();
+		range.moveToPoint(evnt.clientX, evnt.clientY);
+	}
+   
+    // Go to the right until the first blank is reached.
+    while(true)
+    {
+        var res = range.moveEnd("character", 1);
+        if (res != 1)
+        {
+            // End of the document reached.
+            break;
+        }
+
+        var text = range.text;
+        if (text.search("\\n|\\r|\\t| ") != -1)
+        {
+            // Blank reached.
+            range.moveEnd("character", -1);
+            break;
+        }
+    }
+
+    // Go to the left until the first blank is reached.
+    while (true)
+    {
+        var res = range.moveStart("character", -1);
+        if (res != -1)
+        {
+            // Begining of the document reached.
+            break;
+        }
+
+        var text = range.text;
+        if (text.search("\\n|\\r|\\t| ") != -1)
+        {
+            // Blank reached.
+            range.moveStart("character", 1);
+            break;
+        }
+    }
+    
+    var selectedText = range.text;
+    if (selectedText != "")
+	{
+		range.select();
+
+		if ((selectedText.substr(0, 7).toLowerCase() != "http://") &&
+		    (selectedText.substr(0, 8).toLowerCase() != "https://") &&
+			(selectedText.substr(0, 6).toLowerCase() != "ftp://"))
+		{
+			selectedText = "http://" + selectedText;
+		}
+
+		// Open selected URL in a new window or tab (depends on IE settings).
+		var newWnd = wnd.open("about:blank", "_blank");
+		newWnd.navigate(selectedText);
+	}
+}
+catch (e)
+{
+	// Tought luck! We've got an exception.
+	// Do Nothing.
+	;
+}
+
+</SCRIPT>
+</BODY>
+</HTML>

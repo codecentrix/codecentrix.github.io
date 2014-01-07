@@ -1,0 +1,76 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Web macro recorder for IE9 - automate IHTMLElement with fireEvent or keybd_event/mouse_event">
+<meta name="Keywords" content="Internet Explorer Macro Recorder, web macro, IHTMLElement, fireEvent, HTML events, keybd_event, mouse_event, Win32, API">
+<title>
+		Internet Explorer Macro Recorder - fire HTML events on IHTMLElement to simulate users behavior 
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;useHardwareInputEvents - web automation property</h2>
+</div>
+<h1>
+		Sets or retrieves the type of input events used to simulate users actions on HTML elements.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.useHardwareInputEvents = booleanValue;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><i>booleanValue</i> is an expression evaluated to <i>true</i> or <i>false</i>.<br>
+		If booleanValue is <i>false</i> then HTML events are used to click on HTML elements, or to input text in editable controls.
+		If booleanValue is <i>true</i> then hardware events are used. The browser window is put in foreground, then	a hardware keyboard or mouse event
+		is generated (using <a href="http://msdn.microsoft.com/en-us/library/ms646260(VS.85).aspx" target="_blank">mouse_event</a> or <a href="http://msdn.microsoft.com/en-us/library/ms646304(VS.85).aspx" target="_blank">keybd_event</a> Win32 API functions).
+		The default value of the property is <i>false</i> (browser events are used by default).<br>
+		The property affects the following web macro methods: <a href="Click.htm
+			">Click</a> and <a href="InputText.htm
+			">InputText</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Click an element using hardware events.
+</span><span STYLE="color: blue">var</span> coreObj                    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+coreObj.<a href="useRegExp.htm
+			">useRegExp</a>              = <span STYLE="color: blue">true</span>;
+coreObj.<a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a> = <span STYLE="color: blue">true</span>;
+coreObj.<a href="FindBrowser.htm
+			">FindBrowser</a>(<span STYLE="color: red">"url=codecentrix"</span>).<a href="FindElement.htm
+			">FindElement</a>(<span STYLE="color: red">"a"</span>, <span STYLE="color: red">"text=Download"</span>).<a href="Click.htm
+			">Click</a>();
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="asyncHtmlEvents.htm
+			">asyncHtmlEvents</a> | <a href="Core.htm
+			">Core</a> | <a href="Element.htm
+			">Element</a> | <a href="Click.htm
+			">Click</a> | <a href="InputText.htm
+			">InputText</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

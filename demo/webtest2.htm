@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Test Twebst from Web</title>
+
+		<script>
+			function StartIE()
+			{
+				var core = document.getElementById("twebstCore");
+
+				// Open a new browser using twebst core object.
+				var b = core.StartBrowser("http://www.gmail.com/");
+				var u = b.FindElement("input text");
+				
+				u.InputText("your-user");
+			}
+		</script>
+	</head>
+
+	<body>
+		<object id="twebstCore" classid="clsid:173BCDCD-0D75-4CF0-949D-5A07D17384C0">
+			<p>Twebst Library is not installed. Get it from: <a href="http://www.codecentrix.com/download.html">www.codecentrix.com</a></p>
+		</object>
+
+		<input type="button" value="Open Google" onclick="StartIE();"/>
+	</body>
+</html>

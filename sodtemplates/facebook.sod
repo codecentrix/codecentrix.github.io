@@ -1,0 +1,40 @@
+<template type="1" name="Facebook" version="1.0.0" sodinstaller="1.0.0" categories="Login">
+	<description>Automatically log on Facebook site.</description>
+	<ico name="facebook.ico">00000100010010101000010004002801000016000000280000001000000020000000010004000000000080000000120b0000120b0000100000001000000098593b009e624500ab786000ac796100b4846d00f4eeeb00ffffff000000000000000000000000000000000000000000000000000000000000000000000000007777777777777777730000000000003771444444466444177144444446644417700000000660000770000000066000077000000006600007700000055665500770000006666660077000000006600007700000000660000770000000056660077000000002566007700000000000000773000000000000377777777777777777ffff00008001000080010000800100008001000080010000800100008001000080010000800100008001000080010000800100008001000080010000ffff0000</ico>
+	<preinstall/>
+	<sod>
+		<![CDATA[
+// FREE code from CODECENTRIX
+// http://www.codecentrix.com/
+// http://codecentrix.blogspot.com/
+
+// Open a browser or use the browser in foreground and navigate to facebook login page.
+var core     = new ActiveXObject("Twebst.Core");
+var browser = core.foregroundBrowser;
+
+if (browser == null)
+{
+	// No browser in foreground.
+	browser = core.StartBrowser("http://www.facebook.com/");
+}
+else
+{
+	browser.Navigate("http://www.facebook.com/");
+}
+
+// Find login fields.
+var u = browser.FindElement("input text",     "id=email");
+var p = browser.FindElement("input password", "id=pass");
+var s = browser.FindElement("input submit",   "text=Login");
+
+// Log on to site.
+if ((u != null) && (p != null) && (s != null))
+{
+	u.InputText("UUUUUUUUUU");
+	p.InputText("PPPPPPPPPP");
+	s.Click();
+}
+]]>
+	</sod>
+	<postinstall/>
+</template>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Regular expression in VBA Excel - automate HTML elements in Internet Explorer">
+<meta name="Keywords" content="IE automation, VBA, Excel, regular expression, web automation">
+<title>
+		VBA/Excel IE automation - search HTML elements with regular expressions
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;useRegExp - web automation property</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Enables or disables the use of regular expressions in <a href="SearchCondition.htm">Search conditions</a>.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.useRegExp = booleanValue;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><i>booleanValue</i> is an expression evaluated to <i>true</i> or <i>false</i>.<br>
+		If <i>booleanValue</i> is <i>true</i> then regular expressions are used in <a href="SearchCondition.htm">Search conditions</a>,
+		otherwise they are not.
+		The default value of this web automation property is <i>false</i> (by default regular expressions are not used).
+		The property affects all web automation methods that take <a href="SearchCondition.htm">Search conditions</a> as parameters.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Find a browser that loaded a web page from the codecentrix domain.
+</span><span STYLE="color: blue">var</span> coreObj       = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+coreObj.<a href="useRegExp.htm
+			">useRegExp</a> = <span STYLE="color: blue">true</span>;
+<span STYLE="color: blue">var</span> browser       = coreObj.<a href="FindBrowser.htm
+			">FindBrowser</a>(<span STYLE="color: red">"url=codecentrix"</span>);
+<span STYLE="color: blue">if</span> (browser != <span STYLE="color: blue">null</span>)
+{
+	browser.<a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a>(browser.<a href="Browser.htm#constants">SHOW_IN_FOREGROUND</a>);
+}
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="Element.htm
+			">Element</a> | <a href="Frame.htm
+			">Frame</a> | <a href="SearchCondition.htm">Search condition</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

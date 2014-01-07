@@ -1,0 +1,96 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="IE9 Automation Library method for adding options to selection in list-box control">
+<meta name="Keywords" content="IE9 automation, select, option, dropdown, list-box, HTML, web control, onchange">
+<title>
+		Automate HTML &lt;select&gt; objects in IE9 browser - multiple selection list boxes
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;AddSelection - web automation method</h2>
+</div>
+<h1>
+		Adds options to the current selection in HTML multiple selection list-box web controls.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		elementObj.AddSelection(item_to_select);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>item_to_select</code> is the text or the ordinal position of the option to be added to list-box selection.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The input parameter can be:
+		<ul>
+<li>a number that represents the zero-based ordinal position of the option to be added to selection.</li>
+<li>
+				a string that represents the text of the option to be added to selection.
+				If <a href="useRegExp.htm
+			">useRegExp</a> property is <i>true</i>, then all the options that match the input regular expression
+				are added to selection.
+			</li>
+</ul>
+		If no option matches the input parameter, then a script exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">NOT_FOUND_ERROR</a><br>
+		If the method is applied to an <a href="Element.htm
+			">Element</a> that is not a multiple selection list-box web control, then a script exception is
+		thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+
+		<br><br>
+		The time allocated for automating the options selection is specified by <a href="searchTimeout.htm
+			">searchTimeout</a> property. If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser object to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true, then a script exception is thrown.		
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Assume nativeList is a &lt;select multiple&gt; HTML element.
+</span><span STYLE="color: green">// Select the first two items in the multiple selection list-box control.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> list    = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(nativeList);
+list.<a href="Select.htm
+			">Select</a>(0);
+list.<a href="AddSelection.htm
+			">AddSelection</a>(1);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AddSelectionRange.htm
+			">AddSelectionRange</a> | <a href="ClearSelection.htm
+			">ClearSelection</a> | <a href="Element.htm
+			">Element</a> | <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a> | <a href="Select.htm
+			">Select</a> | <a href="selectedOption.htm
+			">selectedOption</a> | <a href="SelectRange.htm
+			">SelectRange</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

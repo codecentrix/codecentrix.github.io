@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Test Twebst from Web</title>
+
+		<script>
+			function StartIE()
+			{
+				// Try to creating Twebst core object. It will fail if the product is not installed on client machine.
+				try
+				{
+					// A warning message will be displayed to the user. Creation may be canceled
+					var core = new ActiveXObject("Twebst.Core");
+
+					// Open a new browser using twebst core object.
+					var b = core.StartBrowser("http://www.gmail.com/");
+					var u = b.FindElement("input text");
+					
+					u.InputText("your-user");
+				}
+				catch (ex)
+				{
+					// Creation not allowed. Twebst is not installed?
+					window.alert(ex.message);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="Open Google" onclick="StartIE();"/>
+	</body>
+</html>

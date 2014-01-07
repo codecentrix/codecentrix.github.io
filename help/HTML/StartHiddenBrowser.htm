@@ -1,0 +1,74 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Internet Explorer Automation - call IELauchURL to start IE7, IE8, IE9 with the right integrity level on Vista/Win7">
+<meta name="Keywords" content="Internet Explorer Automation, IELaunchURL, C# MSHTML, web automation, web macro">
+<title>
+		Internet Explorer Automation in C# and VB.Net - programmatically launch URLs in IE6 - IE9 with an appropriate integrity level
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;StartHiddenBrowser - web automation method</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Starts a new invisible instance of <i>Internet Explorer</i>Internet Explorer browser and returns a <a href="Browser.htm
+			">Browser</a> web automation object connected to it.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		var b = coreObj.StartHiddenBrowser("url");
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>url</code> is the URL where the newly started hidden browser will navigate first.
+    </li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The window of the newly started browser is invisible and the URL is specified by the <i>url</i> parameter.
+		The method throws a web macro exception if a new browser instance can not be started.
+		In this case the <a href="lastError.htm
+			">lastError</a> property of the	<a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">FAIL_ERROR</a>.
+		This <i>Internet Explorer</i> automation method works for all browser versions: <i>IE6</i>, <i>IE7</i>, <i>IE8</i> and <i>IE9</i> and with <i>IE protected mode</i> on <i>Windows XP</i>, <i>Vista</i> and <i>Win7</i>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartHiddenBrowser.htm
+			">StartHiddenBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+newBrowser.<a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a>(newBrowser.<a href="Browser.htm#constants">SHOW_VISIBLE</a>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="foregroundBrowser.htm
+			">foregroundBrowser</a> | <a href="ShowBrowserWindow.htm
+			">ShowBrowserWindow</a> | <a href="StartBrowser.htm
+			">StartBrowser</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

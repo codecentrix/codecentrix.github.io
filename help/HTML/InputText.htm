@@ -1,0 +1,73 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Fill out web forms automatically with Twebst IE macro recorder in C# and C++ by simulating users keystrokes and firing up HTML events">
+<meta name="Keywords" content="IE9 automation, fire event, automate web forms, form filler, automate IHTMLInputElement, automate IHTMLTextAreaElement, C# MSHTML, simulate keystroke">
+<title>
+		IE6-IE9 automation - programmatically fill out web forms in C#, VB.Net, C++ by simulating users keystrokes
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;InputText - web automation method</h2>
+</div>
+<h1>
+		IE automation method that simulates users keystrokes inside web forms editable controls ( <a href="http://msdn.microsoft.com/en-us/library/aa703817(VS.85).aspx" target="_blank">IHTMLInputElement</a> and
+		<a href="http://msdn.microsoft.com/en-us/library/aa741682(VS.85).aspx" target="_blank">IHTMLTextAreaElement</a> ).
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		elementObj.InputText("input_string");
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>input_string</code> is the string that contains the keystrokes to be automatically generated.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		This IE automation method automatically fills out web forms by simulating keystrokes in HTML editable controls, using hardware or <i>Internet Explorer</i> HTML events, depending on <a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a> property.
+		All necessary HTML events are fired up to simulate user's behavior (<b><i>onkeydown</i></b>, <b><i>onkeydown</i></b>, <b><i>onkeyup</i></b>, <b><i>onkeypress</i></b>, <b><i>onchange</i></b>).
+		If the method is applied to an <a href="Element.htm
+			">Element</a> that is not an editable control, then an IE automation exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Assume nativeEdit is a &lt;input type="text"&gt; HTML element.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> e       = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(nativeEdit);
+e.<a href="InputText.htm
+			">InputText</a>(<span STYLE="color: red">"abcdefgh"</span>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a> | <a href="Click.htm
+			">Click</a> | <a href="Select.htm
+			">Select</a> | <a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>

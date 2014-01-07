@@ -1,0 +1,96 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<meta name="Description" content="Automate IE9 tabs - get the list of all IE7/IE8 tab windows (TabWindowClass)">
+<meta name="Keywords" content="web automation, TabWindowClass, Internet Explorer Automation, window handle, C# MSHTML, automate IE tab, IEFrame">
+<title>
+		Internet Explorer Macro - automate TabWindowClass in IE7, IE8 and IE9 with C#, VB.Net, VBA/Excel
+	</title>
+<link href="../CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;tabList - web automation property</h2>
+</div>
+<h1><span STYLE="color: red"><b>Not available in Open Twebst edition!</b></span><br>
+		Connects a <a href="BrowserList.htm
+			">BrowserList</a> IE macro object to all <a href="Browser.htm
+			">Browser</a> objects inside IE7/IE8/IE9 tab windows (<i>TabWindowClass</i>).
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var tabs = browserObj.tabList;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><b><u>This property is available only for Internet Explorer 7 or higher.</u></b><br>
+		This IE automation property returns a <a href="BrowserList.htm
+			">BrowserList</a> macro object. It contains one <a href="Browser.htm
+			">Browser</a> for each tab inside the main frame IE window corresponding to the calling <a href="Browser.htm
+			">Browser</a> object.
+		The calling tab (the one for which <a href="tabList.htm
+			">tabList</a> property was called against) is placed in the first position inside the result <a href="BrowserList.htm
+			">BrowserList</a>.
+		<br><br>
+		In case of an error the property throws a web automation exception and the <a href="lastError.htm
+			">lastError</a> property of the core object is set as follows:
+		<ul>
+<li><a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>: if the version of Internet Explorer is not 7 or higher.</li>
+<li><a href="Core.htm#constants">INVALID_ARG_ERROR</a>: if invalid parameters are provided.</li>
+<li><a href="Core.htm#constants">FAIL_ERROR</a>: in case of anohter error.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj  = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"Twebst.Core"</span>);
+<span STYLE="color: blue">var</span> tabOne   = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+<span STYLE="color: blue">var</span> tabTwo   = tabOne.<a href="OpenNewTab.htm
+			">OpenNewTab</a>(<span STYLE="color: red">"http://www.google.com/"</span>);
+<span STYLE="color: blue">var</span> tabThree = tabOne.<a href="OpenNewTab.htm
+			">OpenNewTab</a>(<span STYLE="color: red">"http://www.yahoo.com/"</span>);
+<span STYLE="color: blue">var</span> allTabs  = tabThree.<a href="tabList.htm
+			">tabList</a>;
+
+<span STYLE="color: blue">var</span> text = <span STYLE="color: red">""</span>;
+<span STYLE="color: blue">for</span> (<span STYLE="color: blue">var</span> i = 0; i &lt; allTabs.length; ++i)
+{
+	text += allTabs.item(i).title + <span STYLE="color: red">"\n"</span>;
+} 
+
+WScript.Echo(text);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="activeTab.htm
+			">activeTab</a> | <a href="Browser.htm
+			">Browser</a> | <a href="foregroundBrowser.htm
+			">foregroundBrowser</a> | <a href="isTabActive.htm
+			">isTabActive</a> | <a href="OpenNewTab.htm
+			">OpenNewTab</a> | <a href="processId.htm
+			">processId</a> | <a href="threadId.htm
+			">threadId</a> | <a href="tabWindow.htm
+			">tabWindow</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2013 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				window['ga-disable-UA-6840573-2'] = true;
+				var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+				document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+				</script><script type="text/javascript">
+				try {
+				var pageTracker = _gat._getTracker("UA-6840573-2");
+				pageTracker._trackPageview();
+				} catch(err) {}</script></body>
+</html>
