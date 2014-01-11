@@ -1,0 +1,79 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - ElementList Object
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;ElementList - IE macro object</h2>
+</div>
+<dl>
+<dd>
+<p>
+		This IE macro object represents a collection of <a href="Element.htm
+			">Element</a> web automation objects. Each web macro object in
+		the collection represents a native <i>Internet Explorer</i> web control ( <a href="http://msdn.microsoft.com/en-us/library/aa752279(VS.85).aspx" target="_blank">IHTMLElement</a> ).
+		It provides properties to access IE macro objects in the collection.
+	</p>
+</dd>
+<dd><code>&nbsp;
+			var elementListObj = browserObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = frameObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = frameObj.FindChildrenElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = elementObj.FindAllElements(Search conditions);
+		</code></dd>
+<dd><code>&nbsp;
+			var elementListObj = elementObj.FindChildrenElements(Search conditions);
+		</code></dd>
+</dl>
+<div class="section">Properties</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="coreProp.htm">core</a></td>
+<td width="80%">Returns a reference to the parent <a href="Core.htm
+			">Core</a> IE macro object of the element list.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="item.htm
+			">item</a></td>
+<td width="80%">Retrieves an <a href="Element.htm
+			">Element</a> IE macro object from the collection based on a given index.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="length.htm
+			">length</a></td>
+<td width="80%">Retrieves the number of <a href="Element.htm
+			">Element</a> web macro objects in the collection.</td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="Element.htm
+			">Element</a> | <a href="Frame.htm
+			">Frame</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+							2014 CodeCentrix Software. All rights reserved.
+						</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

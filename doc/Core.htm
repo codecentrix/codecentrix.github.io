@@ -1,0 +1,196 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - Core Object
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;Core - IE macro object</h2>
+</div>
+<dl>
+<dd>
+<p>
+		The core object is the root of the <i>Open Twebst Library</i> and every IE macro must create a core object in order to gain access to the
+		other features of the web automation library. The methods it provides create <a href="Browser.htm
+			">Browser</a>, <a href="Frame.htm
+			">Frame</a> and <a href="Element.htm
+			">Element</a> web automation objects connected to <i>Internet
+		Explorer</i> HTML web controls. The properties of the core object allow to finely tune the behavior of the other objects and methods. 
+	</p>
+</dd>
+<dd><code>&nbsp;var coreObj = new ActiveXObject("OpenTwebst.Core");</code></dd>
+</dl>
+<div class="section">Methods</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="AttachToNativeBrowser.htm
+			">AttachToNativeBrowser</a></td>
+<td width="80%">Creates a library <a href="Browser.htm
+			">Browser</a> IE macro object from a native <i>Internet Explorer</i> browser object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a></td>
+<td width="80%">Creates a library <a href="Element.htm
+			">Element</a> IE macro object from a native <i>Internet Explorer</i> element object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="AttachToNativeFrame.htm
+			">AttachToNativeFrame</a></td>
+<td width="80%">Creates a library <a href="Frame.htm
+			">Frame</a> IE macro object from a native <i>Internet Explorer</i> window object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="FindBrowser.htm
+			">FindBrowser</a></td>
+<td width="80%">Searches for an existing instance of <i>Internet Explorer</i> browser that verifies a list of <a href="SearchCondition.htm">Search Conditions</a>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="GetClipboardText.htm
+			">GetClipboardText</a></td>
+<td width="80%">The method retrieves text data from the clipboard.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Reset.htm
+			">Reset</a></td>
+<td width="80%">Resets all properties of core IE macro object to their default values.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="SetClipboardText.htm
+			">SetClipboardText</a></td>
+<td width="80%">The method places text on the clipboard in both ANSI and Unicode format.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="StartBrowser.htm
+			">StartBrowser</a></td>
+<td width="80%">Starts a new instance of <i>Internet Explorer</i> browser and returns a <a href="Browser.htm
+			">Browser</a> web macro object connected to it.</td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">Properties</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="asyncHtmlEvents.htm
+			">asyncHtmlEvents</a></td>
+<td width="80%">Determines whether HTML events will be fired up synchronously or asynchronously.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="closeBrowserPopups.htm
+			">closeBrowserPopups</a></td>
+<td width="80%">Automatically close IE browser popups (security alerts, auto complete, errors).</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="foregroundBrowser.htm
+			">foregroundBrowser</a></td>
+<td width="80%">Returns a library <a href="Browser.htm
+			">Browser</a> web automation object attached to foreground <i>Internet Explorer</i> instance.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="IEVersion.htm
+			">IEVersion</a></td>
+<td width="80%">Returns the version of <i>Internet Explorer</i>.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="lastError.htm
+			">lastError</a></td>
+<td width="80%">Returns the error code for the last library operation.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="loadTimeout.htm
+			">loadTimeout</a></td>
+<td width="80%">Sets or retrieves the amount of time library methods wait the web page to load.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a></td>
+<td width="80%">Enables or disables script exception raising when the <a href="loadTimeout.htm
+			">loadTimeout</a> has expired.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="productName.htm
+			">productName</a></td>
+<td width="80%">Returns the name of the installed Twebst Library.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="productVersion.htm
+			">productVersion</a></td>
+<td width="80%">Returns the version of the installed Twebst Library.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="searchTimeout.htm
+			">searchTimeout</a></td>
+<td width="80%">Sets or retrieves the amount of time web automation library methods try to find HTML objects in web pages.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="useHardwareInputEvents.htm
+			">useHardwareInputEvents</a></td>
+<td width="80%">Sets or retrieves the type of input events used to perform actions on HTML web controls.</td>
+</tr>
+</table>
+</dd>
+</dl><a name="#constants"></a><div class="section">Constants</div>
+<dl>
+<dd>
+<table cellspacing="0" border="1" width="90%">
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">OK_ERROR</a></td>
+<td width="80%">No error occured</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">FAIL_ERROR</a></td>
+<td width="80%">Undetermined error occurred.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">INVALID_ARG_ERROR</a></td>
+<td width="80%">Invald parameter in method call.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a></td>
+<td width="80%">Load timeout expired while waiting for the web page to complete.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">INDEX_OUT_OF_BOUND_ERROR</a></td>
+<td width="80%">Attempt to access an element of a collection with an index that exceeds the size of the collection.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">BROWSER_CONNECTION_LOST_ERROR</a></td>
+<td width="80%">A web automation object was disconnected from its <i>Internet Explorer</i> instance.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">INVALID_OPERATION_ERROR</a></td>
+<td width="80%">Operation not applicable to current web automation object.</td>
+</tr>
+<tr valign="top">
+<td width="20%"><a href="Core.htm#constants">NOT_FOUND_ERROR</a></td>
+<td width="80%">Item(s) not found.</td>
+</tr>
+</table>
+</dd>
+</dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="Element.htm
+			">Element</a> | <a href="ElementList.htm
+			">ElementList</a> | <a href="Frame.htm
+			">Frame</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+							2014 CodeCentrix Software. All rights reserved.
+						</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - FindAllElements Method
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;FindAllElements - web automation method</h2>
+</div>
+<h1>
+		Searches inside a container web automation object, the collection of all HTML elements that match a tag-name and verifies a list of
+		<a href="SearchCondition.htm">Search Conditions</a>.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a>, <a href="Frame.htm
+			">Frame</a>, <a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		var elementList = obj.FindAllElements("tag_name", Search conditions);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+			This method accepts a variable number of <a href="SearchCondition.htm">Search Condition</a> arguments.
+			Any HTML attribute is accepted in search conditions. <i>uiName</i> is also accepted as attribute in search conditions,
+			in this case the text name of the HTML element is used in search. If no search condition is provided,
+			then the collection of all elements that match the <i>tag_name</i> is returned.
+		<ul>
+<li><em>  </em><code>tag_name</code> is the HTML tag of the elements to be found.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The method returns an <a href="ElementList.htm
+			">ElementList</a> web automation object containing HTML elements that match the search condition arguments and have
+		the specified <i>tag_name</i>. If no element verifies the search conditions, then an empty list is returned.
+		In case of an error the method throws a web macro exception and the <a href="lastError.htm
+			">lastError</a> property of the core object is set as follows:
+		<ul>
+<li><a href="Core.htm#constants">INVALID_ARG_ERROR</a>: if invalid parameters are provided</li>
+<li><a href="Core.htm#constants">BROWSER_CONNECTION_LOST_ERROR</a>: if the browser was closed.</li>
+<li><a href="Core.htm#constants">FAIL_ERROR</a>: in case of anohter error.</li>
+</ul><br>
+		The time allocated for search is specified by the <a href="searchTimeout.htm
+			">searchTimeout</a> property.
+		If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser objects to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true,
+		then a script exception is thrown.
+		<br><br>
+		If the container object is a <a href="Browser.htm
+			">Browser</a>, then the method searches the elements in all the <i>frame</i> and <i>iframe</i> DOM hierarchy of the browser.
+		If the container object is a <a href="Frame.htm
+			">Frame</a>, then the method searches the elements in all the <i>frame</i> and <i>iframe</i> DOM hierarchy of the container frame.
+		If the container object is an <a href="Element.htm
+			">Element</a>, then the method searches the elements in all HTML DOM hierarchy of the container.
+		<br><br>
+		The target HTML elements can be inside frames/iframes loaded from various domains. <i>Open Twebst Library</i> bypass all <b>cross-frame scripting security restrictions</b>
+		(see: <a href="http://codecentrix.blogspot.com/2007/10/when-ihtmlwindow2getdocument-returns.html" target="_blank">When IHTMLWindow2::get_document returns E_ACCESSDENIED</a> and <a href="http://codecentrix.blogspot.com/2008/02/when-ihtmlwindow2document-throws.html" target="_blank">When IHTMLWindow2.document throws UnauthorizedAccessException</a>).
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Display all the links in a web page.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+
+<span STYLE="color: blue">var</span> textToDisplay = <span STYLE="color: red">""</span>;
+<span STYLE="color: blue">var</span> anchorList    = browser.<a href="FindAllElements.htm
+			">FindAllElements</a>(<span STYLE="color: red">"a"</span>, <span STYLE="color: red">""</span>);
+<span STYLE="color: blue">for</span> (i = 0; i &lt; anchorList.length; ++i)
+{
+	textToDisplay += anchorList(i).<a href="nativeElement.htm
+			">nativeElement</a>.innerText + <span STYLE="color: red">"\n"</span>;
+}
+WScript.Echo(textToDisplay);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a> | <a href="ElementList.htm
+			">ElementList</a> | <a href="FindChildrenElements.htm
+			">FindChildrenElements</a> | <a href="loadTimeout.htm
+			">loadTimeout</a> | <a href="searchTimeout.htm
+			">searchTimeout</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

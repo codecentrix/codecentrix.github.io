@@ -1,0 +1,81 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - WaitToLoad Method
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;WaitToLoad - web automation method</h2>
+</div>
+<h1>
+		Waits the browser to load and check it against a list of <a href="SearchCondition.htm">Search Conditions</a>.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var boolResult = browserObj.WaitToLoad(Search conditions);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+			The method accepts a variable number of <a href="SearchCondition.htm">Search Condition</a> arguments.
+			The following attributes are accepted in search conditions:
+		<ul>
+<li><em>  </em><code>TITLE</code> condition on the title of the browser window</li>
+<li><em>  </em><code>URL</code> condition on the url of the web page</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		This IE automation method returns <i>true</i> if the browser is completely loaded in the amount of time specified by
+		<a href="loadTimeout.htm
+			">loadTimeout</a> property and it verifies the list of <a href="SearchCondition.htm">Search Conditions</a> input parameters.
+		If <a href="loadTimeout.htm
+			">loadTimeout</a> property is zero, then only the check against <a href="SearchCondition.htm">Search Conditions</a> parameters
+		is performed.<br>
+
+		If load timeout has expired and the browser is not completely loaded then <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>.
+		In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> is <i>true</i>, then a web automation exception is thrown.
+		In case of an error the method throws a web automation exception and the <a href="lastError.htm
+			">lastError</a> property of the core object is set as follows:
+		<ul>
+<li><a href="Core.htm#constants">INVALID_ARG_ERROR</a>: if invalid parameters are provided.</li>
+<li><a href="Core.htm#constants">FAIL_ERROR</a>: in case of anohter error.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+browser.<a href="WaitToLoad.htm
+			">WaitToLoad</a>();
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="FindBrowser.htm
+			">FindBrowser</a> | <a href="loadTimeout.htm
+			">loadTimeout</a> | <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - title Property
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;title - web automation property</h2>
+</div>
+<h1>
+		Retrieves the title of the HTML document that is displayed in the header bar of the web page window.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a></dd>
+<dd><code>&nbsp;
+		var t = browserObj.title;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		In case of failure this property throws a script exception and the <a href="lastError.htm
+			">lastError</a> property of the <a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">FAIL_ERROR</a> or <a href="Core.htm#constants">BROWSER_CONNECTION_LOST_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+newBrowser.<a href="WaitToLoad.htm
+			">WaitToLoad</a>();
+WScript.Echo(newBrowser.title);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Browser.htm
+			">Browser</a> | <a href="StartBrowser.htm
+			">StartBrowser</a> | <a href="url.htm
+			">url</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

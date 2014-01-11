@@ -1,0 +1,65 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - nativeElement Property
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;nativeElement - web automation property</h2>
+</div>
+<h1>
+		Returns a native HTML element ( <a href="http://msdn.microsoft.com/en-us/library/aa752279(VS.85).aspx" target="_blank">IHTMLElement</a> )
+		represented by the current web automation library <a href="Element.htm
+			">Element</a> object.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		var native = elementObj.nativeElement;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		With this <i>Internet Explorer</i> automation property, get access to all methods and properties of the <a href="http://msdn.microsoft.com/en-us/library/aa752279(VS.85).aspx" target="_bank">IHTMLElement</a> native object from C#, VB.Net, VBScript web macros.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj    = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> newBrowser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+
+<span STYLE="color: blue">var</span> e = newBrowser.<a href="FindElement.htm
+			">FindElement</a>(<span STYLE="color: red">"a"</span>, <span STYLE="color: red">"text=Download"</span>);
+<span STYLE="color: blue">var</span> native = e.<a href="nativeElement.htm
+			">nativeElement</a>;
+WScript.Echo(native.outerHTML);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a> | <a href="nativeBrowser.htm
+			">nativeBrowser</a> | <a href="nativeFrame.htm
+			">nativeFrame</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

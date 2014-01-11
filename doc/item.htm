@@ -1,0 +1,78 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - item Property
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;item - web automation property</h2>
+</div>
+<h1>
+		Retrieves an <a href="Element.htm
+			">Element</a>, <a href="Frame.htm
+			">Frame</a> or <a href="Browser.htm
+			">Browser</a> object from a collection based on a given index.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="ElementList.htm
+			">ElementList</a></dd>
+<dd><code>&nbsp;
+		var obj = objList.item(index);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>index</code> is the zero based ordinal position of the object to be retrieved from the list of HTML elements/frames or browsers.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Because <i>item</i> is the default property of the list objects, it can be omitted. In this case,
+		the index can applied directly to the list object (see the example bellow). If the <i>index</i> parameter
+		is greater than the index of the last object in the list, a browser macro exception is thrown. In this case
+		the <a href="lastError.htm
+			">lastError</a> property of the <a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">INDEX_OUT_OF_BOUND_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Displays all anchors in a web page.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> browser = coreObj.<a href="StartBrowser.htm
+			">StartBrowser</a>(<span STYLE="color: red">"http://www.codecentrix.com/"</span>);
+<span STYLE="color: blue">var</span> anchors = browser.<a href="FindAllElements.htm
+			">FindAllElements</a>(<span STYLE="color: red">"a"</span>, <span STYLE="color: red">""</span>);
+<span STYLE="color: blue">var</span> text    = <span STYLE="color: red">""</span>;
+
+<span STYLE="color: blue">for</span> (<span STYLE="color: blue">var</span> i = 0; i &lt; anchors.length; ++i)
+{
+	text += anchors.item(i).uiName;
+	text += <span STYLE="color: red">"\n"</span>;
+}
+
+WScript.Echo(text);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="ElementList.htm
+			">ElementList</a> | <a href="length.htm
+			">length</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

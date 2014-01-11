@@ -1,0 +1,80 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - loadTimeoutIsError Property
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;loadTimeoutIsError - web automation property</h2>
+</div>
+<h1>
+		Web automation property that enables or disables web macro exception raising when the <a href="loadTimeout.htm
+			">loadTimeout</a> has expired.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.loadTimeoutIsError = booleanValue;
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>None.<ul>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd><i>booleanValue</i> is an expression evaluated to <i>true</i> or <i>false</i>.<br>
+		If <i>booleanValue</i> is <i>true</i>, then a web macro exception is thrown when <a href="loadTimeout.htm
+			">loadTimeout</a> expires in one of the methods bellow.<br>
+		The default value of the web automation property is <i>true</i> (by default web macro exceptions are thrown when <a href="loadTimeout.htm
+			">loadTimeout</a> expires).<br>
+		The property affects the following methods: <a href="AddSelection.htm
+			">AddSelection</a>, <a href="AddSelectionRange.htm
+			">AddSelectionRange</a>, <a href="FindElement.htm
+			">FindElement</a>, <a href="FindChildElement.htm
+			">FindChildElement</a>, <a href="FindFrame.htm
+			">FindFrame</a>, <a href="FindChildFrame.htm
+			">FindChildFrame</a>,
+		<a href="FindAllElements.htm
+			">FindAllElements</a>, <a href="FindChildrenElements.htm
+			">FindChildrenElements</a>, <a href="FindParentElement.htm
+			">FindParentElement</a>, <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a>, <a href="Select.htm
+			">Select</a>, <a href="selectedOption.htm
+			">selectedOption</a>, <a href="SelectRange.htm
+			">SelectRange</a>, <a href="WaitToLoad.htm
+			">WaitToLoad</a>.
+		When <a href="loadTimeout.htm
+			">loadTimeout</a> expires the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code>
+None.
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="lastError.htm
+			">lastError</a> | <a href="loadTimeout.htm
+			">loadTimeout</a> | <a href="searchTimeout.htm
+			">searchTimeout</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

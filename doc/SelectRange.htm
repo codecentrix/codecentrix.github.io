@@ -1,0 +1,90 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - SelectRange Method
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;SelectRange - web automation method</h2>
+</div>
+<h1>
+		IE automation method that selects a range of options in HTML multiple selection list-box web controls.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Element.htm
+			">Element</a></dd>
+<dd><code>&nbsp;
+		elementObj.SelectRange(start_range, end_range);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>start_range</code> is the text or the ordinal position of the first option in the range to be selected.</li>
+<li><em>  </em><code>end_range</code> is the text or the ordinal position of the last option in the range to be selected.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Any previous selection in the HTML web control is removed and the options between <i>start_range</i> and
+		<i>end_range</i> are selected.<br>
+		Each of the two input parameters can be:
+		<ul>
+<li>a number that represents the zero-based ordinal position of the option to be the limit of the range.</li>
+<li>
+				a string that represents the text pattern of the option to be the limit of the range..
+				* and ? wildcards are accepted in the text pattern.
+			</li>
+</ul>
+		If the speciffied range is empty (no option matches the input parameters), then a script exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">NOT_FOUND_ERROR</a><br>
+		If the IE automation method is applied to an <a href="Element.htm
+			">Element</a> that is not a multiple selection list-box web control, then a script exception is thrown and the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">INVALID_OPERATION_ERROR</a>.
+		
+		<br><br>
+		The time allocated for selecting the options is specified by the <a href="searchTimeout.htm
+			">searchTimeout</a> property. If <a href="loadTimeout.htm
+			">loadTimeout</a> is not zero, then the method waits the browser objects to be completely loaded in the amount of time specified by the property.
+		If the timeout has expired the <a href="lastError.htm
+			">lastError</a> property is set to <a href="Core.htm#constants">LOAD_TIMEOUT_ERROR</a>. In this case, if <a href="loadTimeoutIsError.htm
+			">loadTimeoutIsError</a> property is true, then a script exception is thrown.				
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Assume nativeList is a &lt;select multiple&gt; HTML element.
+</span><span STYLE="color: green">// Select the first two items in the multiple selection list-box control.
+</span><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> list    = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(nativeList);
+list.<a href="SelectRange.htm
+			">SelectRange</a>(0, 1);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="AddSelection.htm
+			">AddSelection</a> | <a href="AddSelectionRange.htm
+			">AddSelectionRange</a> | <a href="ClearSelection.htm
+			">ClearSelection</a> | <a href="Element.htm
+			">Element</a> | <a href="GetAllSelectedOptions.htm
+			">GetAllSelectedOptions</a> | <a href="Select.htm
+			">Select</a> | <a href="selectedOption.htm
+			">selectedOption</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

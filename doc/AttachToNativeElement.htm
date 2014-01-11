@@ -1,0 +1,81 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - AttachToNativeElement Method
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;AttachToNativeElement - web automation method</h2>
+</div>
+<h1>
+		Automates an existing instance of <i>IE6</i> - <i>IE9</i> browser and creates a web automation library <a href="Element.htm
+			">Element</a> object from a native <i>Internet Explorer</i> web object.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		var e = coreObj.AttachToNativeElement(nativeElementObject);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>nativeElementObject</code> is a native <i>Internet Explorer</i> element object.</li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		Returns an <a href="Element.htm
+			">Element</a> library object.
+		The <i>nativeElementObject</i> parameter is a native <i>Internet Explorer</i> HTML element ( <a href="http://msdn.microsoft.com/en-us/library/aa752279(VS.85).aspx" target="_blank">IHTMLElement</a> ).
+		It could be obtained using other ways than <i>Twebst</i> web automation library features. It could be also obtained by using <a href="nativeElement.htm
+			">nativeElement</a> property.
+		This method is useful if you already have a native <i>Internet Explorer</i> web control and you want to use it as a library <a href="Element.htm
+			">Element</a> object.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: green">// Start an Internet Explorer object.
+</span><span STYLE="color: green">// Get the body native element and attach to it.
+</span><span STYLE="color: green">// Use the attached library Element object.
+</span><span STYLE="color: blue">var</span> internetExplorer     = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"InternetExplorer.Application"</span>);
+internetExplorer.Visible = <span STYLE="color: blue">true</span>;
+
+<span STYLE="color: blue">var</span> coreObj         = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+<span STYLE="color: blue">var</span> body            = internetExplorer.Document.body;
+<span STYLE="color: blue">var</span> attachedElement = coreObj.<a href="AttachToNativeElement.htm
+			">AttachToNativeElement</a>(body);
+
+attachedElement.<a href="parentBrowser.htm
+			">parentBrowser</a>.<a href="Navigate.htm
+			">Navigate</a>(<span STYLE="color: red">"www.codecentrix.com"</span>);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="Browser.htm
+			">Browser</a> | <a href="AttachToNativeBrowser.htm
+			">AttachToNativeBrowser</a> | <a href="AttachToNativeFrame.htm
+			">AttachToNativeFrame</a> | <a href="nativeBrowser.htm
+			">nativeBrowser</a> | <a href="nativeFrame.htm
+			">nativeFrame</a> | <a href="nativeElement.htm
+			">nativeElement</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>

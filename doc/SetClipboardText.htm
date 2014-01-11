@@ -1,0 +1,67 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>
+		Open Twebst Library | Documentation - SetClipboardText Method
+	</title>
+<link href="./CSS/help.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="topicHighlight">
+<h2>&nbsp;SetClipboardText - web automation method</h2>
+</div>
+<h1>
+		This IE automation method places text on the clipboard.
+	</h1>
+<div class="section">Applies to:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a></dd>
+<dd><code>&nbsp;
+		coreObj.SetClipboardText(text);
+	</code></dd>
+</dl>
+<div class="section">Arguments:</div>
+<dl>
+<dd>
+<ul>
+<li><em>  </em><code>text</code> is the text to be placed on the clipboard.
+    </li>
+</ul>
+</dd>
+</dl>
+<div class="section">Remarks:</div>
+<dl>
+<dd>
+		The <i>text</i> is placed on the clipboard in both ANSI and Unicode format.
+		The method throws a web macro exception if the clipboard operation fails.
+		In this case the <a href="lastError.htm
+			">lastError</a> property of the	<a href="Core.htm
+			">Core</a> object is set to <a href="Core.htm#constants">FAIL_ERROR</a>.
+	</dd>
+</dl>
+<div class="section">Example:</div>
+<dl><dd><pre><code><span STYLE="color: blue">var</span> coreObj = <span STYLE="color: blue">new</span> ActiveXObject(<span STYLE="color: red">"OpenTwebst.Core"</span>);
+coreObj.<a href="SetClipboardText.htm
+			">SetClipboardText</a>(<span STYLE="color: red">"Open Twebst Library"</span>);
+
+<span STYLE="color: blue">var</span> clipboardText = coreObj.<a href="GetClipboardText.htm
+			">GetClipboardText</a>();
+WScript.Echo(clipboardText);
+		</code></pre></dd></dl>
+<div class="section">See also:</div>
+<dl>
+<dd><a href="Core.htm
+			">Core</a> | <a href="GetClipboardText.htm
+			">GetClipboardText</a></dd>
+</dl>
+<hr SIZE="1"><small><i><a target="_blank" href="http://www.codecentrix.com">&copy;
+						2014 CodeCentrix Software. All rights reserved.
+					</a></i></small><script type="text/javascript">
+				sc_project=1010390; 
+				sc_invisible=1; 
+				sc_partition=9; 
+				sc_security="a4cc6c6f"; 
+				</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><img src="http://c10.statcounter.com/1010390/0/a4cc6c6f/1/" alt="statcounter"></noscript>
+</body>
+</html>
